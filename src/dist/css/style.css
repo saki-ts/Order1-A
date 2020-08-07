@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: #3A3A3A;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Verdana, "Noto Sans JP", YuGothic, "Hiragino Kaku Gothic Pro", "Yu Gothic", "BIZ UDPGothic", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  letter-spacing: 0.05em;
+  line-height: 2;
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol,
+dl {
+  list-style-type: none;
+}
+
+/* --------------------
+smart phone
+default style reset
+-------------------- */
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  border: 2px solid #484848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Verdana, "Noto Sans JP", YuGothic, "Hiragino Kaku Gothic Pro", "Yu Gothic", "BIZ UDPGothic", sans-serif;
+  padding: 10px;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background: #fffbc9;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* select box , checkboxの矢印を非表示 */
+
+select::-ms-expand {
+  display: none;
+}
+
+/* placeholder color */
+
+:-moz-placeholder-shown {
+  color: #eff0f2;
+}
+
+:-ms-input-placeholder {
+  color: #eff0f2;
+}
+
+:placeholder-shown {
+  color: #eff0f2;
+}
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+
+::-webkit-input-placeholder {
+  color: #eff0f2;
+}
+
+/* Firefox 18- */
+
+:-moz-placeholder {
+  color: #eff0f2;
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+
+::-moz-placeholder {
+  color: #eff0f2;
+  opacity: 1;
+}
+
+/* IE 10+ */
+
+:-ms-input-placeholder {
+  color: #eff0f2;
+}
+
+/* --------------------
+font
+-------------------- */
+
+a,
+p {
+  line-height: 1.6;
+}
+
+p {
+  margin: 0;
+}
+
+/* --------------------
+link color
+-------------------- */
+
+a {
+  color: #3A3A3A;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* --------------------
+hover effect
+-------------------- */
+
+a,
+a img,
+input {
+  opacity: 1;
+  transition: opacity .4s, background-color .4s;
+}
+
+/***************************************
+
+header
+
+***************************************/
+
+.h {
+  background: #fff;
+}
+
+.h__container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 56px;
+  width: 100%;
+}

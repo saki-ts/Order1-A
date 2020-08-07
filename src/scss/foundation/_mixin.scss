@@ -1,0 +1,59 @@
+// /***************************************
+// media query
+// ***************************************/
+$breakpoints: (
+  'max-375': 'screen and (max-width: 375px)',
+  'max-480': 'screen and (max-width: 480px)',
+  'min-481': 'screen and (min-width: 481px)',
+  'max-900': 'screen and (max-width: 900px)',
+  'min-901': 'screen and (min-width: 901px)',
+  'max-1024': 'screen and (max-width: 1024px)',
+  'min-1024': 'screen and (min-width: 1024px)',
+  'max-1440': 'screen and (max-width: 1440px)',
+) !default;
+// 引数mqで呼び出す
+@mixin mq($breakpoint: max-900) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// /***************************************
+// placeholder
+// ***************************************/
+@mixin placeholder {
+  :placeholder-shown {
+      @content;
+  }
+  /* Google Chrome, Safari, Opera 15+, Android, iOS */
+  ::-webkit-input-placeholder {
+      @content;
+  }
+  /* Firefox 18- */
+  :-moz-placeholder {
+      opacity: 1;
+      @content;
+  }
+  /* Firefox 19+ */
+  ::-moz-placeholder {
+      opacity: 1;
+      @content;
+  }
+  /* IE 10+ */
+  :-ms-input-placeholder {
+      @content;
+  }
+}
+
+// /***************************************
+// px to vw
+// ***************************************/
+@function get_vw($size, $viewport: 750){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin vw($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
