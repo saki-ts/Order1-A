@@ -3,72 +3,78 @@ html(lang="ja")
   include _element/_head.pug
 
   body
-    include _element/_header.pug
+    .allwrapper
+      include _element/_header.pug
 
-    main.m
-      section.first_view
-        .first_view__item
-          .container.first_view__container
-            h1.first_view__catch Site production
-              br
-              | tailored to customers
-          figure.first_view__image_box.simpleParallax
-          img.first_view__image(src="/image/fv_image@2x.jpg" alt="ファーストビューイメージ")
+      main.m
+        section.first_view
+          .first_view__list
+            .first_view__item
+              .container.wrapper.first_view__container
+                h1.first_view__catch Site production
+                  br
+                  | tailored to customers
+                p.first_view__subcatch Design / web template
+              figure.first_view__image_box
+                img.first_view__image.pc_show.js-parallax(src="../image/fv_image@2x.jpg" alt="ファーストビューイメージ")
+                img.first_view__image.sp_show.js-parallax(src="../image/fv_image_sp@2x.jpg" alt="ファーストビューイメージ")
+          p.first_view__scroller
+            span.first_view__scroller_text Scroll
 
-      section.philosophy
-        .container
-          h2.philosophy__title
-            p.philosophy__title_text--sub Philosophy
-            p.philosophy__title_text 選び続けられる価値のある
-              br
-              | テーマを提供する
+        section.philosophy
+          .container.wrapper
+            h2.philosophy__title
+              p.philosophy__title_text--sub Philosophy
+              p.philosophy__title_text 選び続けられる価値のある
+                br
+                | テーマを提供する
 
-          .philosophy__detail
-            .philosophy__detail_text ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
-              br
-              br
-              | ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
-              br
-              br
-              | ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
+            .philosophy__detail
+              .philosophy__detail_text ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
+                br
+                br
+                | ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
+                br
+                br
+                | ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
+              
+              a.main_button(href="#") View More
+
+        section.service
+          .container.wrapper
+            h2.main_title Service
+              span.main_title--sub 事業内容
             
-            a.main_button(href="#") View More
+            ul.service__card
+              - for (var i = 0; i < 4; i++)
+                li.service_card__item
+                  figure.service_card__image_wrapper
+                    img.service_card__image(src="../image/card_image.jpg", alt="ここに画像が入ります。")
+                  .service_card__body
+                    h3.service_card__title 見出し テキスト
+                    p.service_card__text ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
 
-      section.service
-        .container
-          h2.main_title Service
-            span.main_title--sub 事業内容
-          
-          ul.service__card
-            - for (var i = 0; i < 4; i++)
-              li.service_card__item
-                figure.service_card__image_wrapper
-                  img.service_card__image(src="/image/card_image.jpg", alt="ここに画像が入ります。")
-                .service_card__body
-                  h3.service_card__title 見出し テキスト
-                  p.service_card__text ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
+        section.news
+          .container.wrapper
+            h2.main_title News
+              span.main_title--sub ニュース
 
-      section.news
-        .container
-          h2.main_title News
-            span.main_title--sub ニュース
+            ul.news__list
+              - for (var i = 0; i < 3; i++)
+                li.news_list__item
+                  a.news_list__link(href="#")
+                    time.news_list__date 2020.06.02
+                    p.news_list__text ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
 
-          ul.news__list
-            - for (var i = 0; i < 3; i++)
-              li.news_list__item
-                a.news_list__link(href="#")
-                  time.news_list__date 2020.06.02
-                  p.news_list__text ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            //- a.main_button(href="#") ニュース一覧
+        
+        section.contact
+          .container.wrapper
+            h2.contact__title Contact
 
-          //- a.main_button(href="#") ニュース一覧
-      
-      section.contact
-        .container
-          h2.contact__title Contact
+            p.contact__text お気軽にご相談ください
 
-          p.contact__text お気軽にご相談ください
-
-          a.contact__button(href="contact.html") お問い合わせはこちら
+            a.contact__button(href="contact.html") お問い合わせはこちら
 
 
-  include _element/_footer.pug
+    include _element/_footer.pug

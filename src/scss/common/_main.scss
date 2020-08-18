@@ -1,11 +1,107 @@
 @charset "UTF-8";
 @import "../foundation/_import";
 
+
+/***************************************
+
+Layout
+
+***************************************/
+.allwrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
 .container {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 1024px;
-	padding-right: 32px;
-	padding-left: 32px;
-	width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.m {
+  @include mq() {
+    padding-top: 80px;
+  }
+}
+
+/***************************************
+
+Switch display
+
+***************************************/
+.sp_show {
+  display: none !important;
+}
+
+.pc_show {
+  display: block !important;
+}
+
+@include mq() {
+  .sp_show {
+    display: block !important;
+  }
+
+  .pc_show {
+    display: none !important;
+  }
+}
+
+/***************************************
+
+Common tittles
+
+***************************************/
+.main {
+  &_title {
+    color: $color-primary;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin-bottom: 64px;
+    text-align: center;
+
+    &--sub {
+      display: block;
+      font-weight:500;
+      font-size: 16px;
+      letter-spacing: normal;
+      margin-top: 1em;
+    }
+  }
+}
+
+/***************************************
+
+Buttons
+
+***************************************/
+.main {
+  &_button {
+    background: $color-secondary;
+    border-radius: 5px;
+    border: 2px solid $color-secondary;
+    color: $color-white;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    width: 240px;
+
+    &:hover,&:focus {
+      background: $color-white;
+      color: $color-secondary;
+      transition: $transition-event1;
+      text-decoration: none;
+    }
+  }
 }

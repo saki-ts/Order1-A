@@ -59,6 +59,7 @@ Footer
       color: $color-white;
       &:hover,&:focus {
         opacity: 0.5;
+        text-decoration: none;
       }
     }
     &__text {
@@ -66,6 +67,9 @@ Footer
       font-size: 14px;
       letter-spacing: 0.2rem;
 
+      // ******************
+      // メニューサブテキスト
+      // ******************
       // &--sub {
       //   display: block;
       //   font-size: 12px;
@@ -92,6 +96,7 @@ Footer
       color: $color-white;
 
       &:hover,&:focus {
+        text-decoration: none;
         opacity: 0.5;
       }
     }
