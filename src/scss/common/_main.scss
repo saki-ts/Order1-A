@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "../foundation/_import";
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1024px;
+	padding-right: 32px;
+	padding-left: 32px;
+	width: 100%;
+}

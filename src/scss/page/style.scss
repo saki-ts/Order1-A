@@ -1,0 +1,239 @@
+// @import "_animation";
+@import "../foundation/_import";
+@import "../foundation/_base";
+@import "../common/_header";
+@import "../common/_footer";
+@import "../common/_main";
+// @import "_footer";
+// @import "_contact";
+// @import "_privacy";
+// @import "_loading";
+
+/***************************************
+
+Common/index
+
+***************************************/
+.main {
+  &_title {
+    color: $color-primary;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 64px;
+    text-align: center;
+
+    &--sub {
+      display: block;
+      font-weight:500;
+      font-size: 16px;
+      letter-spacing: normal;
+    }
+  }
+
+  &_button {
+    background: $color-secondary;
+    border-radius: 5px;
+    border: 2px solid $color-secondary;
+    color: $color-white;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    width: 240px;
+
+    &:hover,&:focus {
+      background: $color-white;
+      color: $color-secondary;
+      transition: $transition-button;
+    }
+  }
+}
+
+/***************************************
+
+First view/index
+
+***************************************/
+
+.first_view {
+  &__item {
+    position: relative;
+  }
+  &__container {
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+  }
+
+  &__catch {
+    color: $color-white;
+    font-size: 64px;
+    letter-spacing: 0.1em;
+  }
+}
+
+/***************************************
+
+Philosophy/index
+
+***************************************/
+.philosophy {
+  padding: 120px 0;
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    &_text {
+      &--sub {
+        color: $color-primary;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__detail {
+    margin: 0 auto;
+    max-width: 445px;
+    width: 100%;
+    &_text {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+}
+
+/***************************************
+
+Service/index
+
+***************************************/
+
+.service {
+  background: $color-gray2;
+  padding: 120px 0;
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &_card {
+    &__item {
+      flex: 0 1 47%;
+      margin-right: 6%;
+      margin-bottom: 48px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__image_wrapper {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      text-align: justify;
+    }
+  }
+}
+
+/***************************************
+
+News/index
+
+***************************************/
+.news {
+  padding: 96px 0;
+  &__list ~ .main_button {
+    margin-top: 64px;
+  }
+
+  &_list {
+    &__item {
+      border-bottom: 1px solid $color-gray3;
+      padding: 16px 0;
+    }
+
+    &__link {
+      display: flex;
+
+      &:hover,&:focus {
+        text-decoration: underline;
+      }
+    }
+    &__date {
+      color: $color-gray1;
+      margin-right: 16px;
+      flex: 0 1 100px;
+    }
+
+    &__text {
+      flex: 0 1 auto;
+    }
+  }
+}
+
+/***************************************
+
+Contact/index
+
+***************************************/
+.contact {
+  background: $color-secondary;
+  padding: 96px 0;
+  &__title {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__text {
+    color: $color-white;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__button {
+    background: $color-white;
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    transition: $transition-button;
+    width: 400px;
+
+    &:hover,&:focus {
+      background: $color-secondary;
+      border-color: $color-white;
+      color: $color-white;
+    }
+  }
+}

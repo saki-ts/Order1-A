@@ -1,0 +1,547 @@
+@charset "UTF-8";
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Verdana, "Noto Sans JP", YuGothic, "Hiragino Kaku Gothic Pro", "Yu Gothic", "BIZ UDPGothic", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  letter-spacing: 0.05em;
+  line-height: 2;
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol,
+dl {
+  list-style-type: none;
+}
+
+/* --------------------
+smart phone
+default style reset
+-------------------- */
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  border: 2px solid #484848;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Verdana, "Noto Sans JP", YuGothic, "Hiragino Kaku Gothic Pro", "Yu Gothic", "BIZ UDPGothic", sans-serif;
+  padding: 10px;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background: #fffbc9;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* select box , checkboxの矢印を非表示 */
+
+select::-ms-expand {
+  display: none;
+}
+
+/* placeholder color */
+
+:-moz-placeholder-shown {
+  color: #eff0f2;
+}
+
+:-ms-input-placeholder {
+  color: #eff0f2;
+}
+
+:placeholder-shown {
+  color: #eff0f2;
+}
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+
+::-webkit-input-placeholder {
+  color: #eff0f2;
+}
+
+/* Firefox 18- */
+
+:-moz-placeholder {
+  color: #eff0f2;
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+
+::-moz-placeholder {
+  color: #eff0f2;
+  opacity: 1;
+}
+
+/* --------------------
+font
+-------------------- */
+
+a,
+p {
+  line-height: 2;
+}
+
+p {
+  margin: 0;
+}
+
+/* --------------------
+link color
+-------------------- */
+
+a {
+  color: #3A3A3A;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* --------------------
+hover effect
+-------------------- */
+
+a,
+a img,
+input {
+  opacity: 1;
+  transition: opacity .4s, background-color .4s;
+}
+
+/***************************************
+
+header
+
+***************************************/
+
+.h {
+  background: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.h_container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-height: 80px;
+  max-width: 1440px;
+  padding: 8px 56px;
+  width: 100%;
+}
+
+.h_nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.h_nav__item {
+  margin-right: 48px;
+}
+
+.h_nav__item:last-child {
+  margin-right: 0;
+}
+
+.h_nav__link {
+  display: block;
+  position: relative;
+}
+
+.h_nav__link:after {
+  background: #484848;
+  bottom: -0.1em;
+  content: '';
+  display: block;
+  height: 1px;
+  left: auto;
+  position: absolute;
+  right: 0;
+  transition: 0.2s cubic-bezier(0.26, 0.005, 0, 1.035);
+  width: 0;
+}
+
+.h_nav__link:hover:after,
+.h_nav__link:focus:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.h_nav__text {
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+/***************************************
+
+Footer
+
+***************************************/
+
+.f {
+  background: #707070;
+}
+
+.f_container {
+  padding-bottom: 64px;
+  padding-top: 64px;
+}
+
+.f_head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.f_head__info {
+  margin-right: 20px;
+}
+
+.f_head__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.f_address__text {
+  color: #fff;
+}
+
+.f_address__link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.f_address__link:hover,
+.f_address__link:focus {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.f_nav__list {
+  display: flex;
+}
+
+.f_nav__item {
+  margin-right: 48px;
+}
+
+.f_nav__item:last-child {
+  margin-right: 0;
+}
+
+.f_nav__link {
+  color: #fff;
+}
+
+.f_nav__link:hover,
+.f_nav__link:focus {
+  opacity: 0.5;
+}
+
+.f_nav__text {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.f_bottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.f_copy {
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.f_privacy__link {
+  color: #fff;
+}
+
+.f_privacy__link:hover,
+.f_privacy__link:focus {
+  opacity: 0.5;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+}
+
+/***************************************
+
+Common/index
+
+***************************************/
+
+.main_title {
+  color: #3A3A3A;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.main_title--sub {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+.main_button {
+  background: #484848;
+  border: 2px solid #484848;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+  width: 240px;
+}
+
+.main_button:hover,
+.main_button:focus {
+  background: #fff;
+  color: #484848;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/***************************************
+
+First view/index
+
+***************************************/
+
+.first_view__item {
+  position: relative;
+}
+
+.first_view__container {
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.first_view__catch {
+  color: #fff;
+  font-size: 64px;
+  letter-spacing: 0.1em;
+}
+
+/***************************************
+
+Philosophy/index
+
+***************************************/
+
+.philosophy {
+  padding: 120px 0;
+}
+
+.philosophy__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.philosophy__title_text--sub {
+  color: #3A3A3A;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.philosophy__detail {
+  margin: 0 auto;
+  max-width: 445px;
+  width: 100%;
+}
+
+.philosophy__detail_text {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/***************************************
+
+Service/index
+
+***************************************/
+
+.service {
+  background: #F7F7F7;
+  padding: 120px 0;
+}
+
+.service__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service_card__item {
+  flex: 0 1 47%;
+  margin-bottom: 48px;
+  margin-right: 6%;
+}
+
+.service_card__item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.service_card__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+
+.service_card__image_wrapper {
+  margin-bottom: 24px;
+}
+
+.service_card__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.service_card__text {
+  text-align: justify;
+}
+
+/***************************************
+
+News/index
+
+***************************************/
+
+.news {
+  padding: 96px 0;
+}
+
+.news__list ~ .main_button {
+  margin-top: 64px;
+}
+
+.news_list__item {
+  border-bottom: 1px solid #DBDBDB;
+  padding: 16px 0;
+}
+
+.news_list__link {
+  display: flex;
+}
+
+.news_list__link:hover,
+.news_list__link:focus {
+  text-decoration: underline;
+}
+
+.news_list__date {
+  color: #9A9A9A;
+  flex: 0 1 100px;
+  margin-right: 16px;
+}
+
+.news_list__text {
+  flex: 0 1 auto;
+}
+
+/***************************************
+
+Contact/index
+
+***************************************/
+
+.contact {
+  background: #484848;
+  padding: 96px 0;
+}
+
+.contact__title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact__text {
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact__button {
+  background: #fff;
+  border: 1px solid #484848;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400px;
+}
+
+.contact__button:hover,
+.contact__button:focus {
+  background: #484848;
+  border-color: #fff;
+  color: #fff;
+}

@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@import "../foundation/_import";
+
+/***************************************
+
+Footer
+
+***************************************/
+
+.f {
+  background: $color-footer;
+  &_container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+
+    &__info {
+      margin-right: 20px;
+    }
+
+    &__logo {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &_address {
+    &__text {
+      color: $color-white;
+    }
+
+    &__link {
+      color: $color-white;
+      text-decoration: underline;
+      &:hover,&:focus {
+        opacity: 0.5;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &_nav {
+    &__list {
+      display: flex;
+    }
+    &__item {
+      margin-right: 48px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      color: $color-white;
+      &:hover,&:focus {
+        opacity: 0.5;
+      }
+    }
+    &__text {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.2rem;
+
+      // &--sub {
+      //   display: block;
+      //   font-size: 12px;
+      //   opacity: 0.5;
+      // }
+    }
+  }
+
+  &_bottom {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_copy {
+    color: $color-white;
+    font-size: 14px;
+    opacity: 0.5;
+    text-align: center;
+  }
+
+  &_privacy {
+    &__link {
+      color: $color-white;
+
+      &:hover,&:focus {
+        opacity: 0.5;
+      }
+    }
+  }
+}

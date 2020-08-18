@@ -39,10 +39,6 @@ $breakpoints: (
       opacity: 1;
       @content;
   }
-  /* IE 10+ */
-  :-ms-input-placeholder {
-      @content;
-  }
 }
 
 // /***************************************

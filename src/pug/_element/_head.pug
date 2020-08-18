@@ -1,4 +1,5 @@
 include ../_config/_config.pug
+- var path = '../';
 
 head
 	meta(charset="utf-8")
@@ -13,4 +14,4 @@ head
 	link(href=css.noto rel="stylesheet")
 	link(href=css.reset rel="stylesheet")
 	link(href=css.style rel="stylesheet")
-	title page.title
+	title !{page.title}
