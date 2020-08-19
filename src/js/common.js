@@ -9,9 +9,13 @@ function commonEvent(){
 }
 
 function drawerControl(){
-  let interval = 50;
+  const
+  interval = 50,
+  $trigger = $('.h_nav__hamburger'),
+  $headerNav = $('.h_nav');
+
   $(window).on('load resize', _.debounce(function() {
-  let
+  const
   win_w = $(window).width(),
   bp = 900;
 
@@ -19,60 +23,64 @@ function drawerControl(){
       drawer();
     }
     else {
-      $('.header__nav').removeAttr('style').removeClass('js-nav-open');
-      $('.header__nav_hamburger').removeClass('js-nav-trigger');
+      $headerNav.removeAttr('style').removeClass('js-nav-open');
+      $trigger.removeClass('js-nav-trigger');
     }
   }, interval));
 }
 
 // --------------------------------------- drawer
 function drawer(){
-    let
-    $trigger = $('.h_nav__hamburger'),
-    $headerNav = $('.h_nav'),
-    $navlinks = $('.h_nav__link');
+  let
+  $trigger = $('.h_nav__hamburger'),
+  $headerNav = $('.h_nav'),
+  $navlinks = $('.h_nav__link'),
+  $header = $('.h'),
+  headerY = $header.outerHeight();
+  
+  $headerNav.css('top', Math.floor(headerY));
 
-    $trigger.off('click');
-    $trigger.on('click', function() {
-      let checkClass = $trigger.hasClass('js-nav-trigger');
+  $trigger.off('click');
+  $trigger.on('click', function() {
+    const checkClass = $trigger.hasClass('js-nav-trigger');
 
-      if (!checkClass) {
-        $(this).addClass('js-nav-trigger');
-        $headerNav.addClass('js-nav-open').fadeIn(200);
-      }
+    if (!checkClass) {
+      $(this).addClass('js-nav-trigger');
+      $headerNav.addClass('js-nav-open').fadeIn(200);
+    }
 
-      else if (checkClass){
-        $(this).removeClass('js-nav-trigger')
-        $.when(
-          $headerNav.fadeOut(200)
-        ).done(function() {
-          $headerNav.removeClass('js-nav-open')
-        });
-      }
-    });
+    else if (checkClass){
+      $(this).removeClass('js-nav-trigger')
+      $.when(
+        $headerNav.fadeOut(200)
+      ).done(function() {
+        $headerNav.removeClass('js-nav-open')
+      });
+    }
+  });
 
-    $navlinks.on('click', function() {
-      let checkClass = $trigger.hasClass('js-nav-trigger');
+  $navlinks.on('click', function() {
+    const checkClass = $trigger.hasClass('js-nav-trigger');
 
-      if (checkClass) {
-        $.when(
-          $headerNav.fadeOut(200),
-          $trigger.removeClass('js-nav-trigger')
-        ).done(function() {
-          $headerNav.removeClass('js-nav-open')
-        });
-      }
-    });
+    if (checkClass) {
+      $.when(
+        $headerNav.fadeOut(200),
+        $trigger.removeClass('js-nav-trigger')
+      ).done(function() {
+        $headerNav.removeClass('js-nav-open')
+      });
+    }
+  });
 }
 
 function anchorLink() {
-  $("a[href*='#']").on('click', function () {
+  $('a[href*="#"]').on('click', function () {
     const speed = 700;
     const href= $(this).attr("href").split('#')[1];
-    const headerY = $('.header').outerHeight();
+    const headerY = $('.h').outerHeight();
     const $target = $('#'+href);
-    if(!$target.length){return;}
     const position = $target.offset().top - headerY;
+    if(!$target.length){return;}
     $("html, body").animate({
       scrollTop:position
     }, speed, "swing");
@@ -99,28 +107,25 @@ function stickyHeader(){
       scroll = $(window).scrollTop(),
       w = window.innerWidth;// スクロールバーを含めた横幅
 
+      targetH = target.outerHeight();
+
       // PCサイズ時
       if (w > bp) {
         const
-        // h_top = target.offset().top,
         h = $('main').offset().top;
-
-        $(".js-h-box").height(0);
 
         // mainより大きかったら
         if(scroll > h) {
-					target.addClass('is-sticky');
+          target.addClass('is-sticky');
         }
-        else {
+        else if(scroll == 0) {
           target.removeClass('is-sticky');
         }
       }
 
       // スマホサイズ時
       else if(w < bp) {
-        const
-        // h_top_sp  = target.offset().top,
-        h_sp = target.outerHeight();
+        const h_sp = target.outerHeight();
 
         if(scroll > h_sp) {
           target.addClass('is-sticky');

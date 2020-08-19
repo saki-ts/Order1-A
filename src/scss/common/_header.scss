@@ -14,6 +14,11 @@ header
   top: 0;
   left: 0;
   transition: $transition-event1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  overflow:hidden;
   width: 100%;
   z-index: 2;
 
@@ -30,7 +35,6 @@ header
     padding: 8px 56px;
     margin: 0 auto;
     max-width: 1552px;
-    height: 80px;
     width: 100%;
 
     @include mq() {
@@ -46,9 +50,10 @@ header
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 0.1em;
+    transition: $transition-event1;
 
     @include mq() {
-      height: 60px;
+      max-width: 50%;
     }
   }
 
@@ -62,14 +67,14 @@ header
       padding: 20px;
       position: fixed;
       z-index: 2;
-      bottom: 0;
+      top: 0;
       left: 0;
       opacity: 0;
       overflow: hidden;
       visibility: hidden;
+      height: 100vh;
       width: 100%;
       transition: $transition-event2;
-      height: calc(100% - 80px);
     }
 
     &__hamburger {
@@ -125,9 +130,15 @@ header
 
       @include mq() {
         display: block;
-        height: 90%;
+        height: 91.5%;
         overflow-y: scroll;
         overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display:none;
+        }
       }
     }
 
@@ -157,7 +168,7 @@ header
         right: 0;
         left: auto;
         bottom: -0.1em;
-        transition: 0.2s cubic-bezier(0.260, 0.005, 0.000, 1.035);
+        transition: 0.2s $transition-event2;
         width: 0;
       }
 

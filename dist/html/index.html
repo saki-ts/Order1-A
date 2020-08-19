@@ -20,36 +20,36 @@
       <header class="h js-sticky">
         <div class="h_container">
           <p class="h_logo"><a class="h_logo__link" href="#">
-              <!-- テキストロゴの場合は<img>タグを削除して入力--><img class="h_logo__img" src="https://placehold.jp/14/eeeeee/707070/158x64.png?text=LOGO(%E7%94%BB%E5%83%8F)" alt="LOGO(画像)"></a></p>
+              <!-- テキストロゴの場合は<img>タグを削除して入力--><img class="h_logo__img" src="../image/logo.jpg" alt="LOGO(画像)"></a></p>
           <button class="h_nav__hamburger sp_show"><span class="h_nav__hamburger_icon"></span></button>
           <nav class="h_nav">
             <ul class="h_nav__list">
-              <li class="h_nav__item"><a class="h_nav__link" href="#"><span class="h_nav__text">事業内容</span>
+              <li class="h_nav__item"><a class="h_nav__link" href="index.html#service"><span class="h_nav__text">事業内容</span>
                   <!-- span.h_nav__text--sub text--></a></li>
-              <li class="h_nav__item"><a class="h_nav__link" href="#"><span class="h_nav__text">ニュース</span>
+              <li class="h_nav__item"><a class="h_nav__link" href="index.html#news"><span class="h_nav__text">ニュース</span>
                   <!-- span.h_nav__text--sub text--></a></li>
-              <li class="h_nav__item"><a class="h_nav__link" href="#"><span class="h_nav__text">会社概要</span>
+              <li class="h_nav__item"><a class="h_nav__link" href="about.html"><span class="h_nav__text">会社概要</span>
                   <!-- span.h_nav__text--sub text--></a></li>
-              <li class="h_nav__item"><a class="h_nav__link" href="#"><span class="h_nav__text"> お問い合わせ</span>
+              <li class="h_nav__item"><a class="h_nav__link" href="contact.html"><span class="h_nav__text"> お問い合わせ</span>
                   <!-- span.h_nav__text--sub text--></a></li>
             </ul>
           </nav>
         </div>
       </header>
       <main class="m">
-        <section class="first_view">
+        <section class="first_view js-firstview-show">
           <div class="first_view__list">
             <div class="first_view__item">
+              <figure class="first_view__image_box"><img class="first_view__image pc_show" src="../image/fv_image@2x.jpg" alt="ファーストビューイメージ"><img class="first_view__image sp_show" src="../image/fv_image_sp@2x.jpg" alt="ファーストビューイメージ"></figure>
               <div class="container wrapper first_view__container">
                 <h1 class="first_view__catch">Site production<br>tailored to customers</h1>
                 <p class="first_view__subcatch">Design / web template</p>
               </div>
-              <figure class="first_view__image_box"><img class="first_view__image pc_show js-parallax" src="../image/fv_image@2x.jpg" alt="ファーストビューイメージ"><img class="first_view__image sp_show js-parallax" src="../image/fv_image_sp@2x.jpg" alt="ファーストビューイメージ"></figure>
             </div>
           </div>
           <p class="first_view__scroller"><span class="first_view__scroller_text">Scroll</span></p>
         </section>
-        <section class="philosophy">
+        <section class="philosophy bg_white">
           <div class="container wrapper">
             <h2 class="philosophy__title">
               <p class="philosophy__title_text--sub">Philosophy</p>
@@ -60,7 +60,7 @@
             </div>
           </div>
         </section>
-        <section class="service">
+        <section class="service bg_gray" id="service">
           <div class="container wrapper">
             <h2 class="main_title">Service<span class="main_title--sub">事業内容</span></h2>
             <ul class="service__card">
@@ -95,7 +95,7 @@
             </ul>
           </div>
         </section>
-        <section class="news">
+        <section class="news bg_white" id="news">
           <div class="container wrapper">
             <h2 class="main_title">News<span class="main_title--sub">ニュース</span></h2>
             <ul class="news__list">
@@ -111,9 +111,9 @@
             </ul>
           </div>
         </section>
-        <section class="contact">
+        <section class="contact bg_theme_color">
           <div class="container wrapper">
-            <h2 class="contact__title">Contact</h2>
+            <h2 class="contact__title">Contact<span class="main_title--sub">お問い合わせ</span></h2>
             <p class="contact__text">お気軽にご相談ください</p><a class="contact__button" href="contact.html">お問い合わせはこちら</a>
           </div>
         </section>
@@ -123,9 +123,9 @@
       <div class="container wrapper f_container">
         <div class="f_head">
           <div class="f_head__info">
-            <div class="f_head__logo"><img class="f_head__logo_image" src="https://placehold.jp/14/eeeeee/707070/180x68.png?text=LOGO(%E7%94%BB%E5%83%8F)" alt="LOGO(画像)"></div>
+            <div class="f_head__logo"><img class="f_head__logo_image" src="../image/logo.jpg" alt="LOGO(画像)"></div>
             <div class="f_address">
-              <p class="f_address__text">〒123-4567　東京都渋谷区渋谷1-1-1オーダービル1F</p><a class="f_address__link" href="#">Google map</a>
+              <p class="f_address__text"><span class="f_address__text--postal_code">〒123-4567</span>東京都渋谷区渋谷1-1-1オーダービル1F</p><a class="f_address__link" href="#">Google map</a>
             </div>
           </div>
           <nav class="f_nav">

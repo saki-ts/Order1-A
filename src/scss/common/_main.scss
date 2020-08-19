@@ -16,6 +16,11 @@ Layout
   box-sizing: border-box;
   padding-right: 32px;
   padding-left: 32px;
+
+  @include mq() {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .container {
@@ -56,6 +61,39 @@ Switch display
 
 /***************************************
 
+Background color
+
+***************************************/
+.bg_white {
+  background: $color-white;
+}
+
+.bg_gray {
+  background: $color-gray2;
+}
+
+.bg_theme_color {
+  background: $color-secondary;
+}
+
+/***************************************
+
+Effects
+
+***************************************/
+.js-fadein {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 0.6s linear, transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &.is-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/***************************************
+
 Common tittles
 
 ***************************************/
@@ -69,12 +107,22 @@ Common tittles
     margin-bottom: 64px;
     text-align: center;
 
+    @include mq() {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
     &--sub {
       display: block;
       font-weight:500;
       font-size: 16px;
       letter-spacing: normal;
       margin-top: 1em;
+
+      @include mq() {
+        font-size: 12px;
+      }
+  
     }
   }
 }

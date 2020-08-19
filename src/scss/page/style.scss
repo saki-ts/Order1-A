@@ -19,8 +19,6 @@ First view/index
   position: relative;
   &__item {
     position: relative;
-    max-height: 90vh;
-    overflow: hidden;
     width: 100%;
   }
   &__container {
@@ -36,6 +34,10 @@ First view/index
     @include mq() {
       height: 150px;
     }
+
+    @include mq(max-480) {
+      height: 180px;
+    }
   }
 
   &__catch {
@@ -43,6 +45,7 @@ First view/index
     font-size: 64px;
     letter-spacing: 0.1em;
     margin-bottom: 56px;
+    transition: $transition-event1;
 
     @include mq() {
       font-size: 34px;
@@ -58,6 +61,33 @@ First view/index
 
     @include mq() {
       font-size: 14px;
+    }
+  }
+
+  &__image {
+    &_box {
+      height: 90vh;
+      overflow: hidden;
+
+      @include mq() {
+        height: 80vh;
+      }
+
+      @include mq(max-375) {
+        height: 75vh;
+      }
+    }
+
+    position: absolute;
+    transform: scale(1.1);
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    @include mq() {
+      transform: scale(1.5);
     }
   }
 
@@ -99,6 +129,12 @@ First view/index
       margin: auto;
     }
   }
+
+  &.is-active {
+    .first_view__image {
+      position: fixed;
+    }
+  }
 }
 
 @keyframes scroll{
@@ -124,17 +160,31 @@ Philosophy/index
 ***************************************/
 .philosophy {
   padding: 120px 0;
+
+  @include mq() {
+    padding: 72px 0;
+  }
   &__title {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 40px;
     text-align: center;
+
+    @include mq() {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
     &_text {
       &--sub {
-        color: $color-primary;
+        color: $color-secondary;
         font-size: 16px;
         font-weight: 700;
         margin-bottom: 24px;
+
+        @include mq() {
+          font-size: 14px;
+          margin-bottom: 16px;
+        }
       }
     }
   }
@@ -146,6 +196,10 @@ Philosophy/index
     &_text {
       margin-bottom: 40px;
       text-align: center;
+
+      @include mq() {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -160,10 +214,18 @@ Service/index
   background: $color-gray2;
   padding: 120px 0;
 
+  @include mq() {
+    padding: 72px 0;
+  }
+
   &__card {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include mq(max-768) {
+      display: block;
+    }
   }
 
   &_card {
@@ -172,23 +234,45 @@ Service/index
       margin-right: 6%;
       margin-bottom: 48px;
 
+      @include mq() {
+        margin-right: 0;
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
       &:nth-child(2n) {
         margin-right: 0;
       }
 
       &:nth-last-child(-n+2) {
         margin-bottom: 0;
+
+        @include mq() {
+          margin-bottom: 40px;
+        }
       }
     }
 
     &__image_wrapper {
       margin-bottom: 24px;
+
+      @include mq() {
+        margin-bottom: 20px;
+      }
     }
 
     &__title {
+      color: $color-secondary;
       font-size: 20px;
       font-weight: 700;
       margin-bottom: 16px;
+
+      @include mq() {
+        font-size: 18px;
+      }
     }
 
     &__text {
@@ -204,6 +288,10 @@ News/index
 ***************************************/
 .news {
   padding: 96px 0;
+
+  @include mq() {
+    padding: 72px 0;
+  }
 
   // **************************
   // ニュースにボタンを付ける場合
@@ -221,12 +309,17 @@ News/index
     &__link {
       display: flex;
 
+      @include mq() {
+        display: block;
+      }
+
       &:hover,&:focus {
         text-decoration: underline;
       }
     }
     &__date {
-      color: $color-gray1;
+      // color: $color-gray1;
+      color: $color-secondary;
       margin-right: 16px;
       flex: 0 1 100px;
     }
@@ -245,6 +338,10 @@ Contact/index
 .contact {
   background: $color-secondary;
   padding: 96px 0;
+
+  @include mq() {
+    padding: 72px 0;
+  }
   &__title {
     color: $color-white;
     font-weight: 700;
@@ -259,6 +356,10 @@ Contact/index
     color: $color-white;
     margin-bottom: 40px;
     text-align: center;
+
+    @include mq() {
+      margin-bottom: 20px;
+    }
   }
 
   &__button {
@@ -272,7 +373,8 @@ Contact/index
     padding: 16px;
     text-align: center;
     transition: $transition-event1;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
 
     &:hover,&:focus {
       background: $color-secondary;

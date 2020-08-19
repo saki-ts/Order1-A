@@ -3,10 +3,12 @@ footer.f
     .f_head
       .f_head__info
         .f_head__logo
-          img.f_head__logo_image(src="https://placehold.jp/14/eeeeee/707070/180x68.png?text=LOGO(%E7%94%BB%E5%83%8F)", alt="LOGO(画像)")
+          img.f_head__logo_image(src="../image/logo.jpg", alt="LOGO(画像)")
 
         .f_address
-          p.f_address__text 〒123-4567　東京都渋谷区渋谷1-1-1オーダービル1F
+          p.f_address__text
+            span.f_address__text--postal_code 〒123-4567
+            | 東京都渋谷区渋谷1-1-1オーダービル1F
           a.f_address__link(href="#") Google map
 
       nav.f_nav
@@ -36,5 +38,7 @@ footer.f
       p.f_privacy
         a.f_privacy__link(href="privacy.html") プライバシーポリシー
 script(src=js.jquery)
+//- script(src=js.lodash)
+//- script(src=js.parallax)
 script(src=js.common)
 script(src=js.top)

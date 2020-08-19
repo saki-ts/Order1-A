@@ -7,21 +7,22 @@ html(lang="ja")
       include _element/_header.pug
 
       main.m
-        section.first_view
+        section.first_view.js-firstview-show
           .first_view__list
             .first_view__item
+              figure.first_view__image_box
+                img.first_view__image.pc_show(src="../image/fv_image@2x.jpg" alt="ファーストビューイメージ")
+                img.first_view__image.sp_show(src="../image/fv_image_sp@2x.jpg" alt="ファーストビューイメージ")
+
               .container.wrapper.first_view__container
                 h1.first_view__catch Site production
                   br
                   | tailored to customers
                 p.first_view__subcatch Design / web template
-              figure.first_view__image_box
-                img.first_view__image.pc_show.js-parallax(src="../image/fv_image@2x.jpg" alt="ファーストビューイメージ")
-                img.first_view__image.sp_show.js-parallax(src="../image/fv_image_sp@2x.jpg" alt="ファーストビューイメージ")
           p.first_view__scroller
             span.first_view__scroller_text Scroll
 
-        section.philosophy
+        section.philosophy.bg_white
           .container.wrapper
             h2.philosophy__title
               p.philosophy__title_text--sub Philosophy
@@ -40,7 +41,7 @@ html(lang="ja")
               
               a.main_button(href="#") View More
 
-        section.service
+        section#service.service.bg_gray
           .container.wrapper
             h2.main_title Service
               span.main_title--sub 事業内容
@@ -54,7 +55,7 @@ html(lang="ja")
                     h3.service_card__title 見出し テキスト
                     p.service_card__text ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
 
-        section.news
+        section#news.news.bg_white
           .container.wrapper
             h2.main_title News
               span.main_title--sub ニュース
@@ -68,9 +69,10 @@ html(lang="ja")
 
             //- a.main_button(href="#") ニュース一覧
         
-        section.contact
+        section.contact.bg_theme_color
           .container.wrapper
             h2.contact__title Contact
+              span.main_title--sub お問い合わせ
 
             p.contact__text お気軽にご相談ください
 

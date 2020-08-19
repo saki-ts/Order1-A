@@ -148,12 +148,16 @@ header
 ***************************************/
 
 .h {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   background: #fff;
   border-bottom: 1px solid #EAEBE9;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.16);
   left: 0;
+  overflow: hidden;
   position: fixed;
   top: 0;
+  transform: translate3d(0, 0, 0);
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   z-index: 2;
@@ -161,14 +165,13 @@ header
 
 .h.is-sticky {
   border-color: transparent;
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.16);
 }
 
 .h_container {
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  height: 80px;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1552px;
@@ -181,6 +184,7 @@ header
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.1em;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .h_nav__hamburger {
@@ -214,7 +218,7 @@ header
   left: auto;
   position: absolute;
   right: 0;
-  transition: 0.2s cubic-bezier(0.26, 0.005, 0, 1.035);
+  transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
   width: 0;
 }
 
@@ -281,8 +285,7 @@ Footer
 }
 
 .f_container {
-  padding-bottom: 64px;
-  padding-top: 64px;
+  padding: 64px 0;
 }
 
 .f_head {
@@ -302,6 +305,11 @@ Footer
 
 .f_address__text {
   color: #fff;
+}
+
+.f_address__text--postal_code {
+  display: inline-block;
+  margin-right: 1em;
 }
 
 .f_address__link {
@@ -329,6 +337,7 @@ Footer
 
 .f_nav__link {
   color: #fff;
+  display: block;
 }
 
 .f_nav__link:hover,
@@ -406,6 +415,41 @@ Switch display
 
 /***************************************
 
+Background color
+
+***************************************/
+
+.bg_white {
+  background: #fff;
+}
+
+.bg_gray {
+  background: #F7F7F7;
+}
+
+.bg_theme_color {
+  background: #484848;
+}
+
+/***************************************
+
+Effects
+
+***************************************/
+
+.js-fadein {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 0.6s linear, transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.js-fadein.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/***************************************
+
 Common tittles
 
 ***************************************/
@@ -466,8 +510,6 @@ First view/index
 }
 
 .first_view__item {
-  max-height: 90vh;
-  overflow: hidden;
   position: relative;
   width: 100%;
 }
@@ -488,12 +530,28 @@ First view/index
   font-size: 64px;
   letter-spacing: 0.1em;
   margin-bottom: 56px;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .first_view__subcatch {
   color: #fff;
   font-size: 12px;
   font-weight: 500;
+}
+
+.first_view__image {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+.first_view__image_box {
+  height: 90vh;
+  overflow: hidden;
 }
 
 .first_view__scroller {
@@ -531,6 +589,10 @@ First view/index
   position: absolute;
   right: 0;
   top: -30px;
+}
+
+.first_view.is-active .first_view__image {
+  position: fixed;
 }
 
 @-webkit-keyframes scroll {
@@ -587,7 +649,7 @@ Philosophy/index
 }
 
 .philosophy__title_text--sub {
-  color: #3A3A3A;
+  color: #484848;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -640,6 +702,7 @@ Service/index
 }
 
 .service_card__title {
+  color: #484848;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -674,7 +737,7 @@ News/index
 }
 
 .news_list__date {
-  color: #9A9A9A;
+  color: #484848;
   flex: 0 1 100px;
   margin-right: 16px;
 }
@@ -718,10 +781,11 @@ Contact/index
   font-size: 16px;
   font-weight: 700;
   margin: 0 auto;
+  max-width: 400px;
   padding: 16px;
   text-align: center;
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  width: 400px;
+  width: 100%;
 }
 
 .contact__button:hover,
@@ -740,21 +804,21 @@ Contact/index
   }
 
   .h_logo {
-    height: 60px;
+    max-width: 50%;
   }
 
   .h_nav {
     background: #484848;
-    bottom: 0;
     box-sizing: border-box;
     color: #fff;
     display: none;
-    height: calc(100% - 80px);
+    height: 100vh;
     left: 0;
     opacity: 0;
     overflow: hidden;
     padding: 20px;
     position: fixed;
+    top: 0;
     transition: cubic-bezier(0.19, 1, 0.22, 1);
     visibility: hidden;
     width: 100%;
@@ -802,10 +866,16 @@ Contact/index
   }
 
   .h_nav__list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     display: block;
-    height: 90%;
+    height: 91.5%;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  .h_nav__list::-webkit-scrollbar {
+    display: none;
   }
 
   .h_nav__item {
@@ -820,6 +890,57 @@ Contact/index
     text-align: center;
   }
 
+  .f_container {
+    padding: 72px 0;
+  }
+
+  .f_head {
+    display: block;
+    margin-bottom: 72px;
+  }
+
+  .f_address {
+    margin-bottom: 40px;
+  }
+
+  .f_address__text--postal_code {
+    display: block;
+    margin-right: 0;
+  }
+
+  .f_nav {
+    margin-bottom: 72px;
+  }
+
+  .f_nav__list {
+    display: block;
+  }
+
+  .f_nav__link {
+    padding: 16px 0;
+  }
+
+  .f_bottom {
+    flex-flow: column-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .f_copy {
+    text-align: left;
+    width: 100%;
+  }
+
+  .f_privacy {
+    text-align: left;
+    width: 100%;
+  }
+
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .m {
     padding-top: 80px;
   }
@@ -830,6 +951,15 @@ Contact/index
 
   .pc_show {
     display: none !important;
+  }
+
+  .main_title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .main_title--sub {
+    font-size: 12px;
   }
 
   .first_view__container {
@@ -846,7 +976,92 @@ Contact/index
     font-size: 14px;
   }
 
+  .first_view__image_box {
+    height: 80vh;
+  }
+
+  .first_view__image {
+    transform: scale(1.5);
+  }
+
   .first_view__scroller {
     font-size: 10px;
+  }
+
+  .philosophy {
+    padding: 72px 0;
+  }
+
+  .philosophy__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .philosophy__title_text--sub {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .philosophy__detail_text {
+    font-size: 14px;
+  }
+
+  .service {
+    padding: 72px 0;
+  }
+
+  .service_card__item {
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+
+  .service_card__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .service_card__item:nth-last-child(-n+2) {
+    margin-bottom: 40px;
+  }
+
+  .service_card__image_wrapper {
+    margin-bottom: 20px;
+  }
+
+  .service_card__title {
+    font-size: 18px;
+  }
+
+  .news {
+    padding: 72px 0;
+  }
+
+  .news_list__link {
+    display: block;
+  }
+
+  .contact {
+    padding: 72px 0;
+  }
+
+  .contact__text {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service__card {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .first_view__container {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .first_view__image_box {
+    height: 75vh;
   }
 }
