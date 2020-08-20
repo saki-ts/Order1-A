@@ -8,7 +8,7 @@ function topEvent() {
 function firstView() {
   const
   target = $('.js-firstview-show'),
-  targetH = target.outerHeight(),
+  targetH = target.outerHeight() + 160,
   interval = 10;
 
   $(window).on('load scroll', _.debounce(function() {
