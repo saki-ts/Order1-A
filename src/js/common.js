@@ -6,6 +6,7 @@ function commonEvent(){
   stickyHeader();
   drawerControl();
   anchorLink();
+  IE11SmoothScrollOff();
 }
 
 function drawerControl(){
@@ -136,4 +137,15 @@ function stickyHeader(){
       }
     },interval));
   });
+}
+
+function IE11SmoothScrollOff() {
+  if(navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
+    $('body').on("mousewheel", function () {
+    event.preventDefault();
+    var wd = event.wheelDelta;
+    var csp = window.pageYOffset;
+    window.scrollTo(0, csp - wd);
+    });
+  }
 }

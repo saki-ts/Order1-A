@@ -18,7 +18,6 @@ header
   transform: translate3d(0,0,0);
   -webkit-backface-visibility:hidden;
   backface-visibility:hidden;
-  overflow:hidden;
   width: 100%;
   z-index: 2;
 
@@ -55,6 +54,14 @@ header
     @include mq() {
       max-width: 50%;
     }
+
+    &__img {
+      max-height: 64px;
+
+      @include mq() {
+        max-height: inherit;
+      }
+    }
   }
 
   //* navigation --------------------
@@ -64,7 +71,7 @@ header
       box-sizing: border-box;
       background: $color-secondary;
       color: $color-white;
-      padding: 20px;
+      padding: 40px 20px;
       position: fixed;
       z-index: 2;
       top: 0;
@@ -184,7 +191,7 @@ header
       @include mq() {
         color: $color-white;
         font-size: 16px;
-        padding: 32px 0;
+        padding: 24px 0;
         text-align: center;
       }
     }
