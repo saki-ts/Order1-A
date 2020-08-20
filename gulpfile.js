@@ -47,18 +47,11 @@ const paths = {
   imgSrc: "src/image/*",
   cssSrc: "src/css/*.css",
   scssSrc: [
-    "src/scss/foundation/*",
-    "src/scss/common/*",
-    "src/scss/page/*",
-    "src/scss/thmeme_color/*",
-    "src/scss/admin/*"
+    "src/scss/**/*.scss"
   ],
   ignoreScssSrc: [
-    "src/scss/foundation/!(_)*.scss",
-    "src/scss/common/!(_)*.scss",
-    "src/scss/page/!(_)*.scss",
-    "src/scss/thmeme_color/!(_)*.scss",
-    "src/scss/admin/!(_)*.scss"
+    "src/scss/*.scss",
+    "!src/scss/**/(_)*.scss"
   ],
   stylusSrc: ['stylus/*.styl','!stylus/_*.styl'],
   pugSrc: [
@@ -200,10 +193,12 @@ function cssminFunc(cb) {
 function reloadFunc(cb) {
   browserSync.init({
     server: {
-      watch: true,
-      baseDir: paths.rootDir,//対象ディレクトリ
-      index  : paths.htmlSrc,//インデックスファイル
+      baseDir: './dist/',//対象ディレクトリ
+      routes: {
+        '/html': 'dist'
+      }
     },
+    startPath: '/html/'
   });
   cb();
 }
