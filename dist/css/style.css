@@ -546,7 +546,7 @@ First view/index
 
 .top .first_view__container {
   bottom: 0;
-  height: 300px;
+  height: 200px;
   left: 0;
   margin: auto;
   position: absolute;
@@ -559,6 +559,7 @@ First view/index
   color: #fff;
   font-size: 64px;
   letter-spacing: 0.1em;
+  line-height: 1.6;
   margin-bottom: 56px;
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -570,17 +571,19 @@ First view/index
 }
 
 .top .first_view__image {
+  height: 100vh;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
   transform: scale(1.1);
+  width: 100vw;
   z-index: -1;
 }
 
 .top .first_view__image_box {
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -672,6 +675,10 @@ First view/index
   text-align: center;
 }
 
+.top .philosophy__title_text {
+  line-height: 1.6;
+}
+
 .top .philosophy__title_text--sub {
   color: #484848;
   font-size: 16px;
@@ -703,7 +710,7 @@ First view/index
 
 .top .service_card__item {
   flex: 0 1 47%;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
   margin-right: 6%;
 }
 
@@ -755,7 +762,7 @@ First view/index
 }
 
 .top .news_list__text {
-  flex: 0 1 auto;
+  font-weight: 500;
 }
 
 .top .contact {
@@ -764,13 +771,7 @@ First view/index
 }
 
 .top .contact__title {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .top .contact__text {
@@ -1339,6 +1340,14 @@ Privacy policy
 
   .top .news {
     padding: 72px 0;
+  }
+
+  .top .news_list__item {
+    padding: 20px 0;
+  }
+
+  .top .news_list__item:first-child {
+    padding-top: 0;
   }
 
   .top .news_list__link {
