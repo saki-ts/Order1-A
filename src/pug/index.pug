@@ -2,7 +2,7 @@ doctype html
 html(lang="ja")
   include _element/_head.pug
 
-  body
+  body(class="top")
     .allwrapper
       include _element/_header.pug
 
@@ -38,14 +38,14 @@ html(lang="ja")
                 br
                 br
                 | ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
-              
+
               a.main_button(href="#") View More
 
         section#service.service.bg_gray
           .container.wrapper
             h2.main_title Service
               span.main_title--sub 事業内容
-            
+
             ul.service__card
               - for (var i = 0; i < 4; i++)
                 li.service_card__item
@@ -68,7 +68,7 @@ html(lang="ja")
                     p.news_list__text ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
 
             //- a.main_button(href="#") ニュース一覧
-        
+
         section.contact.bg_theme_color
           .container.wrapper
             h2.main_title.main_title--white.contact__title Contact
