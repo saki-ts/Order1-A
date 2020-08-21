@@ -546,7 +546,7 @@ First view/index
 
 .top .first_view__container {
   bottom: 0;
-  height: 200px;
+  height: 300px;
   left: 0;
   margin: auto;
   position: absolute;
@@ -559,7 +559,6 @@ First view/index
   color: #fff;
   font-size: 64px;
   letter-spacing: 0.1em;
-  line-height: 1.6;
   margin-bottom: 56px;
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -570,29 +569,18 @@ First view/index
   font-weight: 500;
 }
 
-<<<<<<< HEAD
-.first_view__image {
-  height: 100vh;
-=======
 .top .first_view__image {
->>>>>>> origin/feature/contact
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
   transform: scale(1.1);
-  width: 100vw;
   z-index: -1;
 }
 
-<<<<<<< HEAD
-.first_view__image_box {
-  height: 100vh;
-=======
 .top .first_view__image_box {
   height: 90vh;
->>>>>>> origin/feature/contact
   overflow: hidden;
 }
 
@@ -684,15 +672,7 @@ First view/index
   text-align: center;
 }
 
-<<<<<<< HEAD
-.philosophy__title_text {
-  line-height: 1.6;
-}
-
-.philosophy__title_text--sub {
-=======
 .top .philosophy__title_text--sub {
->>>>>>> origin/feature/contact
   color: #484848;
   font-size: 16px;
   font-weight: 700;
@@ -723,7 +703,7 @@ First view/index
 
 .top .service_card__item {
   flex: 0 1 47%;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
   margin-right: 6%;
 }
 
@@ -774,13 +754,8 @@ First view/index
   margin-right: 16px;
 }
 
-<<<<<<< HEAD
-.news_list__text {
-  font-weight: 500;
-=======
 .top .news_list__text {
   flex: 0 1 auto;
->>>>>>> origin/feature/contact
 }
 
 .top .contact {
@@ -788,17 +763,14 @@ First view/index
   padding: 96px 0;
 }
 
-<<<<<<< HEAD
-.contact__title {
-=======
 .top .contact__title {
   color: #fff;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1;
->>>>>>> origin/feature/contact
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .top .contact__text {
@@ -1049,6 +1021,34 @@ Contact
   color: #dbdbdb;
 }
 
+/***************************************
+
+Privacy policy
+
+***************************************/
+
+.privacy .m {
+  padding: 200px 0 140px;
+}
+
+.privacy .section {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+.privacy__contents_title {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.privacy__text {
+  margin-bottom: 2em;
+}
+
+.privacy__info {
+  font-style: normal;
+}
+
 @media screen and (max-width: 960px) {
   .h_container {
     max-width: 100%;
@@ -1219,15 +1219,11 @@ Contact
     font-size: 12px;
   }
 
-<<<<<<< HEAD
   .main_button {
     padding: 12px 16px;
   }
 
-  .first_view__container {
-=======
   .top .first_view__container {
->>>>>>> origin/feature/contact
     height: 150px;
   }
 
@@ -1300,19 +1296,7 @@ Contact
     padding: 72px 0;
   }
 
-<<<<<<< HEAD
-  .news_list__item {
-    padding: 20px 0;
-  }
-
-  .news_list__item:first-child {
-    padding-top: 0;
-  }
-
-  .news_list__link {
-=======
   .top .news_list__link {
->>>>>>> origin/feature/contact
     display: block;
   }
 
@@ -1382,6 +1366,14 @@ Contact
   .contact .form select,
   .contact .form textarea {
     padding: 10px 20px;
+  }
+
+  .privacy .m {
+    padding: 164px 0 72px;
+  }
+
+  .privacy .section {
+    padding: 0 20px;
   }
 }
 
