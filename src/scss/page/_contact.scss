@@ -5,8 +5,11 @@ Contact
 ***************************************/
 
 .contact {
+  .h {
+    border: none;
+  }
   .m {
-    padding: 192px 0 140px;
+    padding: 194px 0 140px;
     @include mq {
       padding: 164px 0 72px;
     }
@@ -24,6 +27,36 @@ Contact
       @include mq {
         padding-bottom: 40px;
       }
+
+      &-msg{
+        text-align: center;
+        padding-bottom: 50px;
+        h2 {
+          color: $color-black;
+          font-size: 22px;
+          font-weight: 600;
+          @include mq {
+            font-size: 18px;
+          }
+        }
+        &:before {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 40px;
+          background-image: url(../../image/icon_form-complete.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          margin: 0 auto 20px;
+        }
+        + .s__header-text {
+          padding: 40px 0 0;
+          @include mq {
+            padding: 32px 0 0;
+          }
+        }
+      }
     }
 
     &__ttl {
@@ -39,6 +72,12 @@ Contact
         font-weight: 500;
         @include mq {
           font-size: 12px;
+        }
+      }
+      &--complete {
+        padding-bottom: 144px;
+        @include mq {
+          padding-bottom: 72px;
         }
       }
     }
@@ -112,11 +151,6 @@ Contact
     &__btn {
       text-align: center;
       padding: 0;
-      &--complete {
-        @include mq {
-          padding: 40px 0 0;
-        }
-      }
       &-wrapper {
         position: relative;
         max-width: 550/630 * 100%;
@@ -138,6 +172,13 @@ Contact
         height: 80px;
         &--link {
           line-height: 80px;
+          text-decoration: none;
+        }
+      }
+
+      span {
+        &:first-child:not(:last-child) {
+          padding-bottom: 50px;
         }
       }
     }
@@ -158,26 +199,31 @@ Contact
     &__back-btn{
       display: flex;
       align-items: center;
-      width: 220px;
-      color: #001E55;
-      font-weight: 600;
+      width: 168px;
+      color: $color-black;
+      font-weight: 500;
       font-size: 15px;
-      margin: 50px auto 0;
+      margin: 0 auto;
       position: relative;
+      height: 30px;
       @include mq {
         font-size: 14px;
       }
       &:before {
         content: '';
         display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-image: url(../img/icon_form-back.svg);
+        width: 8px;
+        height: 16px;
+        background-image: url(../../image/icon_form-back.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         margin-right: 15px;
         z-index: 1;
+      }
+
+      .form__back-input {
+        text-indent: 1em;
       }
     }
 
