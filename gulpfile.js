@@ -159,7 +159,17 @@ function imgminFunc(cb) {
       mozjpeg({
         quality: 85//画像圧縮率
       }),
-      pngquant()
+      pngquant(),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: false },
+          { removeMetadata: false },
+          { removeUnknownsAndDefaults: false },
+          { convertShapeToPath: false },
+          { collapseGroups: false },
+          { cleanupIDs: false }
+        ]
+      })
     ],
     {
       verbose: true
@@ -218,4 +228,4 @@ function watchFunc(cb) {
 
 exports.j = webpackFunc;
 exports.c = cssminFunc;
-exports.default = series(sassFunc, pugFunc, tinypngFuc, watchFunc, reloadFunc);
+exports.default = series(sassFunc, pugFunc, tinypngFuc, imgminFunc, watchFunc, reloadFunc);
