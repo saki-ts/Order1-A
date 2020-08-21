@@ -39,49 +39,18 @@
       <main class="m">
         <section class="section">
           <header class="section__header">
-            <h1 class="section__ttl">Contact<span class="section__ttl-ja">お問合せ</span></h1>
-            <p class="section__txt">このページからお問合せを受け付けております。<br>下記必須項目は必ず入力の上、お問合せ下さい。</p>
+            <h1 class="section__ttl section__ttl--complete">CONTACT<span class="section__ttl-ja">お問合せ</span></h1>
+            <div class="section__header-msg">
+              <h2>お問い合わせ送信完了</h2>
+            </div>
+            <div class="section__header-text section__header-text--complete">
+              <p>お問い合わせいただきありがとうございます。<br>後日、担当者からご連絡させていただきます。</p>
+            </div>
           </header>
           <div class="section__body">
-            <form class="form" action="contact_confirm.html">
-              <div class="form__list">
-                <dl class="form__item">
-                  <dt class="form__label">貴社名</dt>
-                  <dd class="form__desc">
-                    <input type="text" name="company_name" placeholder="株式会社DEMO Inc.">
-                  </dd>
-                </dl>
-                <dl class="form__item">
-                  <dt class="form__label requied">お名前</dt>
-                  <dd class="form__desc">
-                    <input type="text" name="name" placeholder="山田太郎">
-                  </dd>
-                </dl>
-                <dl class="form__item">
-                  <dt class="form__label requied">電話番号（半角英数記号）</dt>
-                  <dd class="form__desc">
-                    <input type="text" name="tel" placeholder="090-1234-5678">
-                  </dd>
-                </dl>
-                <dl class="form__item">
-                  <dt class="form__label requied">メールアドレス（半角英数記号）</dt>
-                  <dd class="form__desc">
-                    <input type="text" name="mail" placeholder="temple@gmail.com">
-                  </dd>
-                </dl>
-                <dl class="form__item">
-                  <dt class="form__label requied">お問い合わせ内容</dt>
-                  <dd class="form__desc">
-                    <textarea name="content" id="" cols="30" rows="8" placeholder="お問い合わせ内容を入力してください。"></textarea>
-                  </dd>
-                </dl>
-              </div>
-              <div class="form__footer">
-                <p><a href="#">プライバシーポリシー</a>をご確認の上、下記ボタンより先にお進みください。</p>
-              </div>
-              <div class="form__btn"><span class="form__btn-wrapper">
-                  <button class="btn">確認画面へ</button></span></div>
-            </form>
+            <div class="form">
+              <div class="form__btn form__btn--complete"><a class="btn btn--link" href="#">トップページに戻る</a></div>
+            </div>
           </div>
         </section>
       </main>

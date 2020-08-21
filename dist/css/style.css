@@ -801,8 +801,12 @@ Contact
 
 ***************************************/
 
+.contact .h {
+  border: none;
+}
+
 .contact .m {
-  padding: 192px 0 140px;
+  padding: 194px 0 140px;
 }
 
 .contact .section {
@@ -815,6 +819,33 @@ Contact
   text-align: center;
 }
 
+.contact .section__header-msg {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.contact .section__header-msg h2 {
+  color: #222;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.contact .section__header-msg:before {
+  background-image: url(../../image/icon_form-complete.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: 40px;
+  margin: 0 auto 20px;
+  width: 40px;
+}
+
+.contact .section__header-msg + .s__header-text {
+  padding: 40px 0 0;
+}
+
 .contact .section__ttl {
   font-size: 46px;
   line-height: 1.6;
@@ -825,6 +856,10 @@ Contact
   display: block;
   font-size: 14px;
   font-weight: 500;
+}
+
+.contact .section__ttl--complete {
+  padding-bottom: 144px;
 }
 
 .contact .section__txt {
@@ -904,6 +939,11 @@ Contact
 
 .contact .form__btn .btn--link {
   line-height: 80px;
+  text-decoration: none;
+}
+
+.contact .form__btn span:first-child:not(:last-child) {
+  padding-bottom: 50px;
 }
 
 .contact .form__back-input {
@@ -922,26 +962,31 @@ Contact
 
 .contact .form__back-btn {
   align-items: center;
-  color: #001E55;
+  color: #222;
   display: flex;
   font-size: 15px;
-  font-weight: 600;
-  margin: 50px auto 0;
+  font-weight: 500;
+  height: 30px;
+  margin: 0 auto;
   position: relative;
-  width: 220px;
+  width: 168px;
 }
 
 .contact .form__back-btn:before {
-  background-image: url(../img/icon_form-back.svg);
+  background-image: url(../../image/icon_form-back.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   content: '';
   display: inline-block;
-  height: 30px;
+  height: 16px;
   margin-right: 15px;
-  width: 30px;
+  width: 8px;
   z-index: 1;
+}
+
+.contact .form__back-btn .form__back-input {
+  text-indent: 1em;
 }
 
 .contact .form input[type="tel"],
@@ -1277,12 +1322,24 @@ Contact
     padding-bottom: 40px;
   }
 
+  .contact .section__header-msg h2 {
+    font-size: 18px;
+  }
+
+  .contact .section__header-msg + .s__header-text {
+    padding: 32px 0 0;
+  }
+
   .contact .section__ttl {
     font-size: 32px;
   }
 
   .contact .section__ttl-ja {
     font-size: 12px;
+  }
+
+  .contact .section__ttl--complete {
+    padding-bottom: 72px;
   }
 
   .contact .form__list {
@@ -1304,10 +1361,6 @@ Contact
   .contact .form__footer {
     padding: 0 20px 40px;
     text-align: left;
-  }
-
-  .contact .form__btn--complete {
-    padding: 40px 0 0;
   }
 
   .contact .form__back-btn {
