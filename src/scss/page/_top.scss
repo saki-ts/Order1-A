@@ -11,7 +11,7 @@ First view/index
       width: 100%;
     }
     &__container {
-      height: 300px;
+      height: 200px;
       position: absolute;
       top: 0;
       left: 0;
@@ -33,6 +33,7 @@ First view/index
       color: $color-white;
       font-size: 64px;
       letter-spacing: 0.1em;
+      line-height: 1.6;
       margin-bottom: 56px;
       transition: $transition-event1;
 
@@ -55,7 +56,7 @@ First view/index
 
     &__image {
       &_box {
-        height: 90vh;
+        height: 100vh;
         overflow: hidden;
 
         @include mq() {
@@ -73,6 +74,8 @@ First view/index
       top: 0;
       left: 0;
       right: 0;
+      width: 100vw;
+      height: 100vh;
       z-index: -1;
 
       @include mq() {
@@ -164,6 +167,7 @@ First view/index
         margin-bottom: 20px;
       }
       &_text {
+        line-height: 1.6;
         &--sub {
           color: $color-secondary;
           font-size: 16px;
@@ -221,7 +225,7 @@ First view/index
       &__item {
         flex: 0 1 47%;
         margin-right: 6%;
-        margin-bottom: 48px;
+        margin-bottom: 80px;
 
         @include mq() {
           margin-right: 0;
@@ -293,6 +297,13 @@ First view/index
       &__item {
         border-bottom: 1px solid $color-gray3;
         padding: 16px 0;
+
+        @include mq() {
+          padding: 20px 0;
+          &:first-child {
+            padding-top: 0;
+          }
+        }
       }
 
       &__link {
@@ -307,14 +318,13 @@ First view/index
         }
       }
       &__date {
-        // color: $color-gray1;
         color: $color-secondary;
         margin-right: 16px;
         flex: 0 1 100px;
       }
 
       &__text {
-        flex: 0 1 auto;
+        font-weight: 500;
       }
     }
   }
@@ -332,13 +342,7 @@ First view/index
       padding: 72px 0;
     }
     &__title {
-      color: $color-white;
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 1;
-      letter-spacing: 0.1em;
       margin-bottom: 40px;
-      text-align: center;
     }
 
     &__text {
