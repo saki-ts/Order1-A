@@ -835,7 +835,7 @@ Contact
 }
 
 .contact .section__header-msg:before {
-  background-image: url(../../image/icon_form-complete.svg);
+  background-image: url(../image/icon_form-complete.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
