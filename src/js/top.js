@@ -7,7 +7,7 @@ function topEvent() {
 
 function firstView() {
   const
-  target = $('.js-firstview-show'),
+  target = $('.js-firstview'),
   targetH = target.outerHeight() + 160,
   interval = 10;
 

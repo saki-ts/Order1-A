@@ -460,7 +460,7 @@ Common tittles
 .main_title {
   color: #3A3A3A;
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.1em;
   line-height: 1;
   margin-bottom: 64px;
@@ -492,6 +492,7 @@ Buttons
   color: #fff;
   display: block;
   font-size: 16px;
+  font-style: normal;
   margin: 0 auto;
   padding: 16px;
   text-align: center;
@@ -801,6 +802,175 @@ First view/index
   border-color: #fff;
   color: #fff;
   text-decoration: none;
+}
+
+/***************************************
+
+About
+
+***************************************/
+
+.about .m {
+  padding-top: 140px;
+}
+
+.about .about__header {
+  padding-bottom: 96px;
+}
+
+.about .about__header_title {
+  margin-bottom: 0;
+}
+
+.about .about__msg {
+  padding: 120px 0;
+}
+
+.about .msg__body {
+  display: flex;
+}
+
+.about .msg__body_img {
+  flex: 0 1 426px;
+  margin-right: 56px;
+}
+
+.about .msg__body_dtl {
+  flex: 0 1 calc(100% - 482px);
+}
+
+.about .msg__body_title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.about .msg__body_text {
+  margin-bottom: 40px;
+}
+
+.about__parallax {
+  height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about__parallax_img {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(1.1);
+  width: 100vw;
+  z-index: -1;
+}
+
+.about__parallax.is-active .about__parallax_img {
+  bottom: 0;
+  position: fixed;
+}
+
+.about__company {
+  padding: 120px 0;
+}
+
+.about .company__list {
+  align-items: center;
+  border-bottom: 1px solid #DBDBDB;
+  display: flex;
+  padding: 24px 0;
+}
+
+.about .company__list:first-child {
+  padding-top: 0;
+}
+
+.about .company__name {
+  flex: 0 1 80px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 90px;
+}
+
+.about__access {
+  padding: 120px 0;
+}
+
+.about .access__address {
+  margin-top: 48px;
+}
+
+.about .address__inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .address__button {
+  font-size: 14px;
+  margin: 0;
+  padding: 4px 12px;
+  width: 120px;
+}
+
+.about .address__title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.about .address__dtl {
+  font-style: normal;
+}
+
+.about__branch {
+  padding: 120px 0;
+}
+
+.about .branch__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about .branch__card {
+  flex: 0 1 48%;
+  margin-bottom: 40px;
+  margin-right: 4%;
+}
+
+.about .branch__card:nth-child(2n) {
+  margin-right: 0;
+}
+
+.about .branch__card:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+
+.about .branch__title {
+  font-size: 24px;
+  margin-bottom: 56px;
+}
+
+.about .branch__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about .branch__map {
+  margin-bottom: 16px;
+}
+
+.about .branch__address {
+  margin-bottom: 24px;
+}
+
+.about .branch__button {
+  font-size: 14px;
+  margin-right: 0;
+  padding: 4px 12px;
+  width: 120px;
 }
 
 /***************************************
@@ -1359,6 +1529,10 @@ Privacy policy
 
   .top .contact__text {
     margin-bottom: 20px;
+  }
+
+  .about .m {
+    padding-top: 164px;
   }
 
   .contact .m {

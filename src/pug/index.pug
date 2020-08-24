@@ -1,3 +1,4 @@
+- var page_title = index;
 doctype html
 html(lang="ja")
   include _element/_head.pug
@@ -7,7 +8,7 @@ html(lang="ja")
       include _element/_header.pug
 
       main.m
-        section.first_view.js-firstview-show
+        section.first_view.js-firstview
           .first_view__list
             .first_view__item
               figure.first_view__image_box
@@ -80,3 +81,4 @@ html(lang="ja")
 
 
     include _element/_footer.pug
+    script(src=js.top)
