@@ -835,7 +835,7 @@ Contact
 }
 
 .contact .section__header-msg:before {
-  background-image: url(../../image/icon_form-complete.svg);
+  background-image: url(../image/icon_form-complete.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -899,7 +899,7 @@ Contact
 }
 
 .contact .form__desc p {
-  border-bottom: 1px solid #C2CDDD;
+  border-bottom: 1px solid #d0d8d9;
   padding-bottom: 30px;
 }
 
