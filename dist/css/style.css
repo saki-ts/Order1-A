@@ -867,19 +867,15 @@ About
 }
 
 .about__parallax_img {
+  bottom: 0;
   left: 0;
   margin: auto;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   transform: scale(1.2);
   width: 100vw;
   z-index: -1;
-}
-
-.about__parallax.is-active .about__parallax_img {
-  bottom: 0;
-  position: fixed;
 }
 
 .about__company {

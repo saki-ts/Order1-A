@@ -1,4 +1,4 @@
-import {debounce} from "./lodash";
+// import {debounce} from "./lodash";
 
 var events = new commonEvent();
 
@@ -15,7 +15,7 @@ function drawerControl(){
   $trigger = $('.h_nav__hamburger'),
   $headerNav = $('.h_nav');
 
-  $(window).on('load resize', _.debounce(function() {
+  $(window).on('load resize',(function() {
   const
   win_w = $(window).width(),
   bp = 900;
@@ -27,7 +27,7 @@ function drawerControl(){
       $headerNav.removeAttr('style').removeClass('js-nav-open');
       $trigger.removeClass('js-nav-trigger');
     }
-  }, interval));
+  }));
 }
 
 // --------------------------------------- drawer
@@ -83,25 +83,19 @@ function anchorLink() {
     if (href == '') {
       const $target = $('body');
       const position = $target.offset().top - headerY;
-      if(!position) return;
-      if(position) {
-        $("html, body").animate({
-          scrollTop:position
-        }, speed, "swing");
-        return false;
-      }
+      $("html, body").animate({
+        scrollTop:position
+      }, speed, "swing");
+      return false;
     }
 
     if (!href == '') {
       const $target = $('#'+href);
       const position = $target.offset().top - headerY;
-      if(!position) return;
-      if(position) {
-        $("html, body").animate({
-          scrollTop:position
-        }, speed, "swing");
-        return false;
-      }
+      $("html, body").animate({
+        scrollTop:position
+      }, speed, "swing");
+      return false;
     }
   });
 }
@@ -120,7 +114,7 @@ function stickyHeader(){
     bp = 960,
     interval = 10;
 
-    $(window).on('resize scroll', _.debounce(function() {
+    $(window).on('resize scroll',(function() {
       let
       scroll = $(window).scrollTop(),
       w = window.innerWidth;// スクロールバーを含めた横幅
@@ -152,7 +146,7 @@ function stickyHeader(){
           target.removeClass('is-sticky');
         }
       }
-    },interval));
+    }));
   });
 }
 

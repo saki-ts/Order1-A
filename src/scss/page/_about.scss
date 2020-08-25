@@ -88,12 +88,13 @@ About
     }
 
     &_img {
-      position: absolute;
+      position: fixed;
       transform: scale(1.2);
       margin: auto;
       top: 0;
       left: 0;
       right: 0;
+      bottom: 0;
       width: 100vw;
       z-index: -1;
 
@@ -102,12 +103,11 @@ About
       }
     }
 
-    &.is-active {
-      .about__parallax_img {
-        position: fixed;
-        bottom: 0;
-      }
-    }
+    // &.is-active {
+    //   .about__parallax_img {
+    //     position: fixed;
+    //   }
+    // }
   }
 
   &__company {
