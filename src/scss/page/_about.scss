@@ -5,15 +5,15 @@ About
 ***************************************/
 .about {
   .m {
-    padding-top: 140px;
-
-    @include mq {
-      padding-top: 164px;
-    }
+    padding-top: 0;
   }
   .about {
     &__header {
-      padding-bottom: 96px;
+      padding: 140px 0 96px;
+
+      @include mq {
+        padding-top: 164px;
+      }
 
       &_title {
         margin-bottom: 0;
@@ -23,19 +23,34 @@ About
 
   .about__msg {
     padding: 120px 0;
+
+    @include mq {
+      padding: 72px 0;
+    }
   }
 
   .msg {
     &__body {
       display: flex;
 
+      @include mq {
+        display: block;
+      }
+
       &_img {
-        flex: 0 1 426px;
+        max-width: 426px;
+        width: 100%;
         margin-right: 56px;
+
+        @include mq {
+          margin-right: 0;
+          margin-bottom: 32px;
+        }
       }
 
       &_dtl {
-        flex: 0 1 calc(100% - 482px);
+        max-width: 482px;
+        width: 100%;
       }
 
       &_title {
@@ -46,6 +61,19 @@ About
 
       &_text {
         margin-bottom: 40px;
+
+        @include mq {
+          margin-bottom: 32px;
+        }
+      }
+
+      &_name {
+        font-size: 16px;
+
+        &--position {
+          font-size: 14px;
+          margin-right: 1em;
+        }
       }
     }
   }
@@ -55,16 +83,23 @@ About
     overflow: hidden;
     position: relative;
 
+    @include mq {
+      height: 220px;
+    }
+
     &_img {
       position: absolute;
-      transform: scale(1.1);
+      transform: scale(1.2);
       margin: auto;
       top: 0;
       left: 0;
       right: 0;
       width: 100vw;
-      // height: 100vh;
       z-index: -1;
+
+      @include mq {
+        height: 80vh;
+      }
     }
 
     &.is-active {
@@ -77,6 +112,10 @@ About
 
   &__company {
     padding: 120px 0;
+
+    @include mq {
+      padding: 72px 0;
+    }
   }
 
   .company {
@@ -86,30 +125,47 @@ About
       display: flex;
       padding: 24px 0;
 
+      @include mq {
+        display: block;
+      }
+
       &:first-child {
         padding-top: 0;
       }
     }
     &__name {
       font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
       flex: 0 1 80px;
       margin-right: 90px;
+
+      @include mq {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
     }
   }
 
   &__access {
     padding: 120px 0;
+
+    @include mq {
+     padding: 72px 0;   
+    }
   }
 
   .access {
-    &__address {
-      margin-top: 48px;
+    &__map {
+      margin-bottom: 48px;
+
+      @include mq {
+        margin-bottom: 40px;
+      }
     }
   }
 
   .address {
-    &__inner {
+    &__head {
       align-items: center;
       display: flex;
       justify-content: space-between;
@@ -117,7 +173,7 @@ About
 
     &__button {
       font-size: 14px;
-      margin: 0;
+      margin-right: 0;
       padding: 4px 12px;
       width: 120px;
     }
@@ -128,13 +184,23 @@ About
       font-style: normal;
     }
 
-    &__dtl {
+    &__body {
+      @include mq {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__text {
       font-style: normal;
     }
   }
 
   &__branch {
-    padding: 120px 0;
+    padding: 120px 0 80px;
+
+    @include mq {
+      padding: 72px 0 32px;
+    }
   }
 
   .branch {
@@ -142,6 +208,10 @@ About
       display: flex;
       justify-content: space-between;
       flex-wrap:wrap;
+
+      @include mq {
+        display: block;
+      }
     }
 
     &__card {
@@ -153,18 +223,26 @@ About
         margin-right: 0;
       }
 
-      &:nth-last-child(-n+2) {
-        margin-bottom: 0;
+      @include mq {
+        margin-right: 0;
       }
     }
     &__title {
       font-size: 24px;
       margin-bottom: 56px;
+
+      @include mq {
+        font-size: 18px;
+      }
     }
 
     &__name {
       font-size: 18px;
       font-weight: 600;
+
+      @include mq {
+        margin-bottom: 24px;
+      }
     }
 
     &__map {

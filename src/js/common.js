@@ -75,13 +75,13 @@ function drawer(){
 }
 
 function anchorLink() {
-  $('a[href*="#"]').on('click', function () {
-    const speed = 700;
-    const href= $(this).attr("href").split('#')[1];
-    const headerY = $('.h').outerHeight();
-    const $target = $('#'+href);
-    const position = $target.offset().top - headerY;
-    if(!$target.length){return;}
+  const $target = $('a[href^="#"]');
+  $target.on('click', function () {
+    const
+    speed = 700,
+    headerY = $('.h').outerHeight(),
+    position = $('this').offset().top - headerY;
+    if(!$('this').length){return;}
     $("html, body").animate({
       scrollTop:position
     }, speed, "swing");

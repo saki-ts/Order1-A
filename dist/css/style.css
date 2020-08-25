@@ -811,11 +811,11 @@ About
 ***************************************/
 
 .about .m {
-  padding-top: 140px;
+  padding-top: 0;
 }
 
 .about .about__header {
-  padding-bottom: 96px;
+  padding: 140px 0 96px;
 }
 
 .about .about__header_title {
@@ -831,12 +831,14 @@ About
 }
 
 .about .msg__body_img {
-  flex: 0 1 426px;
   margin-right: 56px;
+  max-width: 426px;
+  width: 100%;
 }
 
 .about .msg__body_dtl {
-  flex: 0 1 calc(100% - 482px);
+  max-width: 482px;
+  width: 100%;
 }
 
 .about .msg__body_title {
@@ -847,6 +849,15 @@ About
 
 .about .msg__body_text {
   margin-bottom: 40px;
+}
+
+.about .msg__body_name {
+  font-size: 16px;
+}
+
+.about .msg__body_name--position {
+  font-size: 14px;
+  margin-right: 1em;
 }
 
 .about__parallax {
@@ -861,7 +872,7 @@ About
   position: absolute;
   right: 0;
   top: 0;
-  transform: scale(1.1);
+  transform: scale(1.2);
   width: 100vw;
   z-index: -1;
 }
@@ -888,7 +899,7 @@ About
 
 .about .company__name {
   flex: 0 1 80px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   margin-right: 90px;
 }
@@ -897,11 +908,11 @@ About
   padding: 120px 0;
 }
 
-.about .access__address {
-  margin-top: 48px;
+.about .access__map {
+  margin-bottom: 48px;
 }
 
-.about .address__inner {
+.about .address__head {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -909,7 +920,7 @@ About
 
 .about .address__button {
   font-size: 14px;
-  margin: 0;
+  margin-right: 0;
   padding: 4px 12px;
   width: 120px;
 }
@@ -920,12 +931,12 @@ About
   font-weight: 600;
 }
 
-.about .address__dtl {
+.about .address__text {
   font-style: normal;
 }
 
 .about__branch {
-  padding: 120px 0;
+  padding: 120px 0 80px;
 }
 
 .about .branch__inner {
@@ -942,10 +953,6 @@ About
 
 .about .branch__card:nth-child(2n) {
   margin-right: 0;
-}
-
-.about .branch__card:nth-last-child(-n+2) {
-  margin-bottom: 0;
 }
 
 .about .branch__title {
@@ -1531,8 +1538,78 @@ Privacy policy
     margin-bottom: 20px;
   }
 
-  .about .m {
+  .about .about__header {
     padding-top: 164px;
+  }
+
+  .about .about__msg {
+    padding: 72px 0;
+  }
+
+  .about .msg__body {
+    display: block;
+  }
+
+  .about .msg__body_img {
+    margin-bottom: 32px;
+    margin-right: 0;
+  }
+
+  .about .msg__body_text {
+    margin-bottom: 32px;
+  }
+
+  .about__parallax {
+    height: 220px;
+  }
+
+  .about__parallax_img {
+    height: 80vh;
+  }
+
+  .about__company {
+    padding: 72px 0;
+  }
+
+  .about .company__list {
+    display: block;
+  }
+
+  .about .company__name {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+
+  .about__access {
+    padding: 72px 0;
+  }
+
+  .about .access__map {
+    margin-bottom: 40px;
+  }
+
+  .about .address__body {
+    margin-bottom: 24px;
+  }
+
+  .about__branch {
+    padding: 72px 0 32px;
+  }
+
+  .about .branch__inner {
+    display: block;
+  }
+
+  .about .branch__card {
+    margin-right: 0;
+  }
+
+  .about .branch__title {
+    font-size: 18px;
+  }
+
+  .about .branch__name {
+    margin-bottom: 24px;
   }
 
   .contact .m {
