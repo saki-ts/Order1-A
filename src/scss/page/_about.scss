@@ -7,16 +7,17 @@ About
   .m {
     padding-top: 0;
   }
+
+  .branch_main_title {
+    margin-bottom: 0;
+  }
+
   .about {
     &__header {
-      padding: 140px 0 96px;
+      padding: 180px 0 140px;
 
       @include mq {
-        padding-top: 164px;
-      }
-
-      &_title {
-        margin-bottom: 0;
+        padding: 164px 0 96px;
       }
     }
   }
@@ -54,9 +55,14 @@ About
       }
 
       &_title {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 24px;
         margin-bottom: 32px;
+
+        @include mq {
+          font-size: 18px;
+          line-height: 1.6;
+        }
       }
 
       &_text {
@@ -119,6 +125,12 @@ About
   }
 
   .company {
+    &__container {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 680px;
+      width: 100%;
+    }
     &__list {
       align-items: center;
       border-bottom: 1px solid $color-gray3;
@@ -134,7 +146,7 @@ About
       }
     }
     &__name {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 14px;
       flex: 0 1 80px;
       margin-right: 90px;
@@ -159,6 +171,7 @@ About
       margin-bottom: 48px;
 
       @include mq {
+        height: 240px;
         margin-bottom: 40px;
       }
     }
@@ -180,7 +193,7 @@ About
 
     &__title {
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 700;
       font-style: normal;
     }
 
@@ -232,13 +245,13 @@ About
       margin-bottom: 56px;
 
       @include mq {
-        font-size: 18px;
+        font-size: 20px;
       }
     }
 
     &__name {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 700;
 
       @include mq {
         margin-bottom: 24px;
@@ -247,6 +260,10 @@ About
 
     &__map {
       margin-bottom: 16px;
+
+      @include mq {
+        height: 240px;
+      }
     }
 
     &__address {

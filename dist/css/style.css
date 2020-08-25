@@ -460,7 +460,7 @@ Common tittles
 .main_title {
   color: #3A3A3A;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1;
   margin-bottom: 64px;
@@ -472,6 +472,24 @@ Common tittles
 }
 
 .main_title--sub {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: 1em;
+}
+
+.branch_main_title {
+  color: #3A3A3A;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.branch_main_title--sub {
   display: block;
   font-size: 16px;
   font-weight: 500;
@@ -814,12 +832,12 @@ About
   padding-top: 0;
 }
 
-.about .about__header {
-  padding: 140px 0 96px;
+.about .branch_main_title {
+  margin-bottom: 0;
 }
 
-.about .about__header_title {
-  margin-bottom: 0;
+.about .about__header {
+  padding: 180px 0 140px;
 }
 
 .about .about__msg {
@@ -843,7 +861,7 @@ About
 
 .about .msg__body_title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 32px;
 }
 
@@ -882,6 +900,13 @@ About
   padding: 120px 0;
 }
 
+.about .company__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 680px;
+  width: 100%;
+}
+
 .about .company__list {
   align-items: center;
   border-bottom: 1px solid #DBDBDB;
@@ -896,7 +921,7 @@ About
 .about .company__name {
   flex: 0 1 80px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   margin-right: 90px;
 }
 
@@ -924,7 +949,7 @@ About
 .about .address__title {
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .about .address__text {
@@ -958,7 +983,7 @@ About
 
 .about .branch__name {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .about .branch__map {
@@ -983,7 +1008,7 @@ Contact
 ***************************************/
 
 .contact .m {
-  padding: 194px 0 140px;
+  padding: 180px 0 140px;
 }
 
 .contact .section {
@@ -1246,7 +1271,7 @@ Privacy policy
 ***************************************/
 
 .privacy .m {
-  padding: 200px 0 140px;
+  padding: 180px 0 140px;
 }
 
 .privacy .section {
@@ -1437,6 +1462,15 @@ Privacy policy
     font-size: 12px;
   }
 
+  .branch_main_title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .branch_main_title--sub {
+    font-size: 12px;
+  }
+
   .main_button {
     padding: 12px 16px;
   }
@@ -1535,7 +1569,7 @@ Privacy policy
   }
 
   .about .about__header {
-    padding-top: 164px;
+    padding: 164px 0 96px;
   }
 
   .about .about__msg {
@@ -1549,6 +1583,11 @@ Privacy policy
   .about .msg__body_img {
     margin-bottom: 32px;
     margin-right: 0;
+  }
+
+  .about .msg__body_title {
+    font-size: 18px;
+    line-height: 1.6;
   }
 
   .about .msg__body_text {
@@ -1581,6 +1620,7 @@ Privacy policy
   }
 
   .about .access__map {
+    height: 240px;
     margin-bottom: 40px;
   }
 
@@ -1601,11 +1641,15 @@ Privacy policy
   }
 
   .about .branch__title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .about .branch__name {
     margin-bottom: 24px;
+  }
+
+  .about .branch__map {
+    height: 240px;
   }
 
   .contact .m {
