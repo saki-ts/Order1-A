@@ -178,12 +178,16 @@ header
   width: 100%;
 }
 
-.h_logo {
+.h_logo__link {
   color: #484848;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
-  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.h_logo__link:hover,
+.h_logo__link :focus {
+  text-decoration: none;
 }
 
 .h_logo__img {
@@ -302,8 +306,13 @@ Footer
 }
 
 .f_head__logo {
+  color: #fff;
   display: block;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .f_address__text {
@@ -1417,6 +1426,10 @@ Privacy policy
   .f_head {
     display: block;
     margin-bottom: 72px;
+  }
+
+  .f_head__logo {
+    font-size: 20px;
   }
 
   .f_address {
