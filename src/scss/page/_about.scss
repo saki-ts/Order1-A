@@ -22,6 +22,35 @@ About
     }
   }
 
+  .about {
+    &_title {
+      color: $color-primary;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      margin-bottom: 64px;
+      text-align: center;
+  
+      @include mq() {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+
+      &--sub {
+        display: block;
+        font-weight:500;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        margin-top: 1em;
+  
+        @include mq() {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
   .about__msg {
     padding: 120px 0;
 
@@ -108,12 +137,6 @@ About
         height: 80vh;
       }
     }
-
-    // &.is-active {
-    //   .about__parallax_img {
-    //     position: fixed;
-    //   }
-    // }
   }
 
   &__company {
@@ -128,7 +151,7 @@ About
     &__container {
       margin-right: auto;
       margin-left: auto;
-      max-width: 680px;
+      max-width: 844px;
       width: 100%;
     }
     &__list {
@@ -168,6 +191,7 @@ About
 
   .access {
     &__map {
+      height: 380px;
       margin-bottom: 48px;
 
       @include mq {
@@ -259,6 +283,7 @@ About
     }
 
     &__map {
+      height: 270px;
       margin-bottom: 16px;
 
       @include mq {
