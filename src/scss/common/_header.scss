@@ -45,19 +45,22 @@ header
 
   //* logo -------------------------
   &_logo {
-    color: $color-secondary;
-    font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 0.1em;
-    transition: $transition-event1;
-
     @include mq() {
       max-width: 50%;
     }
 
+    &__link {
+      color: $color-secondary;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      &:hover,:focus {
+        text-decoration: none;
+      }
+    }
+
     &__img {
       max-height: 64px;
-
       @include mq() {
         max-height: inherit;
       }

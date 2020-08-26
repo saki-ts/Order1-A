@@ -33,7 +33,16 @@ Footer
 
     &__logo {
       display: block;
+      font-size:24px;
+      color: $color-white;
+      letter-spacing: 0.1em;
       margin-bottom: 20px;
+      text-decoration: none;
+      font-weight: 700;
+
+      @include mq {
+        font-size: 20px;
+      }
     }
   }
 
