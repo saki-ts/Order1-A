@@ -13,6 +13,17 @@
     <link href="../css/reset.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <title>オーダー１-Aテンプレート</title>
+    <script>
+      var ua = navigator.userAgent.toLowerCase();
+      var isiOS = (ua.indexOf('iphone') > -1) || (ua.indexOf('ipad') > -1);
+      if(isiOS) {
+      var viewport = document.querySelector('meta[name="viewport"]');
+      if(viewport) {
+      var viewportContent = viewport.getAttribute('content');
+      viewport.setAttribute('content', viewportContent + ', user-scalable=no');
+      }
+      }
+    </script>
   </head>
   <body class="contact">
     <div class="allwrapper">
