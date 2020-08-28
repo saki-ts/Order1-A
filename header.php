@@ -6,36 +6,48 @@
 <!DOCTYPE html>
 <html lang="ja">
 <?php get_template_part( 'parts/head' ); ?>
+<?php if(is_front_page()):?>
+<body class='top'>
+<?php else : ?>
 <body class='<?php echo $pageClass; ?>'>
+<?php endif; ?>
+<style>
+#wpadminbar {
+  display:none !important;
+}
+</style>
   <div class="allwrapper">
     <header class="h js-sticky">
       <div class="h_container">
         <p class="h_logo">
-          the_custom_logo();
-          if (!has_custom_logo()) {
-            bloginfo('name');
-          }
+          <a class="h_logo__link" href="<?php bloginfo('url');?>">
+          <?php 
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+            if ( has_custom_logo() ) {
+              echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '" class="h_logo__img">';
+            } else {
+              echo get_bloginfo( 'name' );
+            }
+          ?>
+          </a>
         </p>
         <button class="h_nav__hamburger sp_show"><span class="h_nav__hamburger_icon"></span></button>
         <nav class="h_nav">
-          <?php wp_nav_menu(
-            array (
+          <?php 
+            $headerNav =
+            array(
               //カスタムメニュー名
-              'theme_location' => 'h_nav',
-              //コンテナを表示しない
+              'theme_location' => 'header_nav',
+              //ulを梱包する親divを非表示
               'container' => false,
               //カスタムメニューを設定しない際に固定ページでメニューを作成しない
               'fallback_cb' => false,
               // 出力される要素の中のulにメニュークラスを付ける
               'menu_class' => 'h_nav__list',
-            )
-          ); ?>
-          <ul class="h_nav__list">
-            <li class="h_nav__item"><a class="h_nav__link" href="<?php bloginfo('url');?>#service"><span class="h_nav__text">事業内容</span></a></li>
-            <li class="h_nav__item"><a class="h_nav__link" href="<?php bloginfo('url');?>#news"><span class="h_nav__text">ニュース</span></a></li>
-            <li class="h_nav__item"><a class="h_nav__link" href="<?php bloginfo('url');?>/about"><span class="h_nav__text">会社情報</span></a></li>
-            <li class="h_nav__item"><a class="h_nav__link" href="<?php bloginfo('url');?>/contact"><span class="h_nav__text"> お問い合わせ</span></a></li>
-          </ul>
+            );
+            wp_nav_menu( $headerNav );
+          ?>
         </nav>
       </div>
     </header>

@@ -165,8 +165,10 @@ header
       }
     }
 
-    &__link {
+    a {
       display: block;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
       position: relative;
 
       &:after {
@@ -177,7 +179,7 @@ header
         position: absolute;
         right: 0;
         left: auto;
-        bottom: -0.1em;
+        bottom: -0.2em;
         transition: 0.2s $transition-event2;
         width: 0;
       }
@@ -198,23 +200,17 @@ header
         text-align: center;
       }
     }
-
-    &__text {
+    // ******************
+    // メニューサブテキスト
+    // ******************
+    &__sub_text {
       display: block;
-      font-weight: 600;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: normal;
       letter-spacing: 0.2rem;
-
-      // ******************
-      // メニューサブテキスト
-      // ******************
-      // &--sub {
-      // 	display: block;
-      //   font-size: 12px;
-      //   font-style: normal;
-      //   font-weight: normal;
-      // 	letter-spacing: 0.2rem;
-      // 	text-align: center;
-      // }
+      margin-top: -0.5em;
+      text-align: center;
     }
   }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: default template
+ * Template Name: ORder1-A theme
  */
 get_header();
 ?>

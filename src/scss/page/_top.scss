@@ -312,9 +312,16 @@ First view/index
         @include mq() {
           display: block;
         }
-
         &:hover,&:focus {
           text-decoration: underline;
+        }
+      }
+
+      &__inner {
+        display: flex;
+
+        @include mq() {
+          display: block;
         }
       }
       &__date {
