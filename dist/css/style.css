@@ -367,6 +367,12 @@ Footer
   text-decoration: none;
 }
 
+.f_nav__sub_text {
+  display: block;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
 .f_bottom {
   align-items: center;
   display: flex;
@@ -543,29 +549,6 @@ First view/index
 
 ***************************************/
 
-.top {
-  /***************************************
-
-  Philosophy/index
-
-  ***************************************/
-  /***************************************
-
-  Service/index
-
-  ***************************************/
-  /***************************************
-
-  News/index
-
-  ***************************************/
-  /***************************************
-
-  Contact/index
-
-  ***************************************/
-}
-
 .top .first_view {
   position: relative;
 }
@@ -695,6 +678,12 @@ First view/index
   }
 }
 
+/***************************************
+
+Philosophy/index
+
+***************************************/
+
 .top .philosophy {
   padding: 120px 0;
 }
@@ -727,6 +716,12 @@ First view/index
   margin-bottom: 40px;
   text-align: center;
 }
+
+/***************************************
+
+Service/index
+
+***************************************/
 
 .top .service {
   background: #F7F7F7;
@@ -768,6 +763,12 @@ First view/index
   text-align: justify;
 }
 
+/***************************************
+
+News/index
+
+***************************************/
+
 .top .news {
   padding: 96px 0;
 }
@@ -799,6 +800,12 @@ First view/index
 .top .news_list__text {
   font-weight: 500;
 }
+
+/***************************************
+
+Contact/index
+
+***************************************/
 
 .top .contact {
   background: #484848;
