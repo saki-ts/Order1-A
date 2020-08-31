@@ -25,7 +25,6 @@
         </div>
       </div>
       <nav class="f_nav">
-        <ul class="f_nav__list">
         <?php 
           $footerNav =
           array (
@@ -38,8 +37,7 @@
             'menu_class' => 'f_nav__list'
           );
           wp_nav_menu( $footerNav );
-          ?>
-        </ul>
+        ?>
       </nav>
     </div>
     <div class="f_bottom"><small class="f_copy">© <?php echo date('Y');?> <?php bloginfo('name');?> All Rights Reserved.</small>
