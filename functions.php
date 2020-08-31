@@ -21,7 +21,7 @@ function register_custom_menus() {
   ));
 }
 
-// ナビゲーションに説明が入力されていたら、サブキャプションとして表示
+// ナビゲーションに説明が入力されていたら、サブタイトルとして表示
 add_filter('walker_nav_menu_start_el', 'description_in_custom_nav_menu', 10, 4);
 function description_in_custom_nav_menu($item_output, $item){
   return preg_replace('/(<a.*?>[^<]*?)</', '$1' . "<span class='h_nav__sub_text'>{$item->description}</span><", $item_output);
