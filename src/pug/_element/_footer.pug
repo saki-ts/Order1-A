@@ -2,8 +2,8 @@ footer.f
   .container.wrapper.f_container
     .f_head
       .f_head__info
-        p.f_head__logo DEMO Inc.
-          // img.f_head__logo_image(src="../image/logo.jpg", alt="LOGO(画像)")
+        p.f_head__logo 
+          img.f_head__logo_img(src="../image/logo.jpg", alt="LOGO(画像)")
 
         .f_address
           p.f_address__text
@@ -14,24 +14,20 @@ footer.f
       nav.f_nav
         ul.f_nav__list
           li.f_nav__item
-            a.f_nav__link(href="index.html#service")
-              span.f_nav__text 事業内容
-              //- span.f_nav__text--sub sub text
+            a(href="index.html#service") 事業内容
+              // span.f_nav__sub_text text
           
           li.f_nav__item
-            a.f_nav__link(href="index.html#news")
-              span.f_nav__text ニュース
-              //- span.f_nav__text--sub sub text
+            a(href="index.html#news") ニュース
+              // span.f_nav__sub_text sub text
 
           li.f_nav__item
-            a.f_nav__link(href="about.html")
-              span.f_nav__text 会社情報
-              //- span.f_nav__text--sub sub text
+            a(href="about.html") 会社情報
+              // span.f_nav__sub_text sub text
 
           li.f_nav__item
-            a.f_nav__link(href="contact.html")
-              span.f_nav__text お問い合わせ
-              //- span.f_nav__text--sub sub text
+            a(href="contact.html") お問い合わせ
+              // span.f_nav__sub_text sub text
 
     .f_bottom
       small.f_copy © 2020 株式会社DEMO Inc.  All Rights Reserved.

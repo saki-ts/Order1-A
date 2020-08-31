@@ -211,14 +211,16 @@ header
   margin-right: 0;
 }
 
-.h_nav__link {
+.h_nav a {
   display: block;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
   position: relative;
 }
 
-.h_nav__link:after {
+.h_nav a:after {
   background: #484848;
-  bottom: -0.1em;
+  bottom: -0.2em;
   content: '';
   display: block;
   height: 1px;
@@ -229,22 +231,26 @@ header
   width: 0;
 }
 
-.h_nav__link:hover,
-.h_nav__link:focus {
+.h_nav a:hover,
+.h_nav a:focus {
   text-decoration: none;
 }
 
-.h_nav__link:hover:after,
-.h_nav__link:focus:after {
+.h_nav a:hover:after,
+.h_nav a:focus:after {
   left: 0;
   right: auto;
   width: 100%;
 }
 
-.h_nav__text {
+.h_nav__sub_text {
   display: block;
-  font-weight: 600;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
   letter-spacing: 0.2rem;
+  margin-top: -0.5em;
+  text-align: center;
 }
 
 /***************************************
@@ -347,21 +353,24 @@ Footer
   margin-right: 0;
 }
 
-.f_nav__link {
+.f_nav a {
   color: #fff;
   display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
 }
 
-.f_nav__link:hover,
-.f_nav__link:focus {
+.f_nav a:hover,
+.f_nav a:focus {
   opacity: 0.5;
   text-decoration: none;
 }
 
-.f_nav__text {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.2rem;
+.f_nav__sub_text {
+  display: block;
+  font-size: 12px;
+  opacity: 0.5;
 }
 
 .f_bottom {
@@ -540,29 +549,6 @@ First view/index
 
 ***************************************/
 
-.top {
-  /***************************************
-
-  Philosophy/index
-
-  ***************************************/
-  /***************************************
-
-  Service/index
-
-  ***************************************/
-  /***************************************
-
-  News/index
-
-  ***************************************/
-  /***************************************
-
-  Contact/index
-
-  ***************************************/
-}
-
 .top .first_view {
   position: relative;
 }
@@ -692,6 +678,12 @@ First view/index
   }
 }
 
+/***************************************
+
+Philosophy/index
+
+***************************************/
+
 .top .philosophy {
   padding: 120px 0;
 }
@@ -724,6 +716,12 @@ First view/index
   margin-bottom: 40px;
   text-align: center;
 }
+
+/***************************************
+
+Service/index
+
+***************************************/
 
 .top .service {
   background: #F7F7F7;
@@ -765,6 +763,12 @@ First view/index
   text-align: justify;
 }
 
+/***************************************
+
+News/index
+
+***************************************/
+
 .top .news {
   padding: 96px 0;
 }
@@ -783,6 +787,10 @@ First view/index
   text-decoration: underline;
 }
 
+.top .news_list__inner {
+  display: flex;
+}
+
 .top .news_list__date {
   color: #484848;
   flex: 0 1 100px;
@@ -792,6 +800,12 @@ First view/index
 .top .news_list__text {
   font-weight: 500;
 }
+
+/***************************************
+
+Contact/index
+
+***************************************/
 
 .top .contact {
   background: #484848;
@@ -1293,6 +1307,18 @@ Contact
   color: #dbdbdb;
 }
 
+.contact .js-confirm {
+  display: none;
+}
+
+.contact .js-contact-complete {
+  display: none;
+}
+
+.contact .wpcf7c-conf {
+  display: none;
+}
+
 /***************************************
 
 Privacy policy
@@ -1412,7 +1438,7 @@ Privacy policy
     margin-right: 0;
   }
 
-  .h_nav__link {
+  .h_nav a {
     color: #fff;
     font-size: 16px;
     padding: 24px 0;
@@ -1449,7 +1475,7 @@ Privacy policy
     display: block;
   }
 
-  .f_nav__link {
+  .f_nav a {
     padding: 16px 0;
   }
 
@@ -1590,6 +1616,10 @@ Privacy policy
   }
 
   .top .news_list__link {
+    display: block;
+  }
+
+  .top .news_list__inner {
     display: block;
   }
 

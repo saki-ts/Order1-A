@@ -92,9 +92,12 @@ Footer
         margin-right: 0;
       }
     }
-    &__link {
+    a {
       color: $color-white;
       display: block;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.2rem;
 
       @include mq() {
         padding: 16px 0;
@@ -104,19 +107,13 @@ Footer
         text-decoration: none;
       }
     }
-    &__text {
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.2rem;
-
-      // ******************
-      // メニューサブテキスト
-      // ******************
-      // &--sub {
-      //   display: block;
-      //   font-size: 12px;
-      //   opacity: 0.5;
-      // }
+    // ******************
+    // メニューサブテキスト
+    // ******************
+    &__sub_text {
+      display: block;
+      font-size: 12px;
+      opacity: 0.5;
     }
   }
 
