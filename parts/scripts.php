@@ -1,30 +1,16 @@
 <?php
   $themePath = get_template_directory_uri().'/dist/';
 ?>
-<!-- 共通読込 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="<?php echo $themePath; ?>js/common.bundle.js"></script>
-<!-- / 共通読込 -->
 
 <?php if(is_front_page()) : ?>
-  <!-- トップページの時読込 -->
 <script src="<?php echo $themePath; ?>js/top.bundle.js"></script>
-<!-- / トップページの時読込 -->
 <?php endif; ?>
 
 <?php if(is_page('contact')) : ?>
-<!-- お問い合わせページの時読込 -->
 <script>
   $(function(){
-    var $selectbox = $('#js-selectbox');
-    if(!$selectbox.length){return;}
-    $selectbox.find('option').each(function(){
-      var $this = $(this);
-      if($this.val() === ''){
-        $this.text('選択してください');
-      }
-    });
-
     var $formBackInput = $('.form__back-input');
     var $formBackBtn = $('.form__back-btn');
     var $formList = $('.form__list');
@@ -74,5 +60,4 @@
     });
   });
 </script>
-<!-- / お問い合わせページの時読込 -->
 <?php endif; ?>

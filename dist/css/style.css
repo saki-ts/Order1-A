@@ -1304,6 +1304,14 @@ Contact
   display: none;
 }
 
+.contact .js-contact-complete {
+  display: none;
+}
+
+.contact .wpcf7c-conf {
+  display: none;
+}
+
 /***************************************
 
 Privacy policy

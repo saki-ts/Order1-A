@@ -6,14 +6,6 @@
 // カスタムロゴ有効化設定
 add_theme_support('custom-logo');
 
-// カスタムロゴクラス名設定
-// add_filter( 'get_custom_logo', 'change_custom_logo_class' );
-
-// function change_custom_logo_class( $html ) {
-//   $html = str_replace( 'custom-logo', 'h_logo__img', $html );
-//   $html = str_replace( 'h_logo__img-link', 'h_logo__link', $html );
-//   return $html;
-// }
 
 // ************************************************
 //  ナビゲーション
@@ -90,18 +82,4 @@ function head_Cleaneup() {
   remove_action('wp_print_styles', 'print_emoji_styles');
   // remove emoji style css
   wp_deregister_script('comment-reply');
-}
-
-// ************************************************
-//  Contact Form 7 確認画面設定
-// ************************************************
-add_action( 'wp_footer', 'add_thanks_page' );
-function add_thanks_page() {
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-  location = 'https://localhost:10016/thanks/';
-}, false );
-</script>
-EOD;
 }
