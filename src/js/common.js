@@ -35,7 +35,7 @@ function drawer(){
   let
   $trigger = $('.h_nav__hamburger'),
   $headerNav = $('.h_nav'),
-  $navlinks = $('.h_nav__link'),
+  $navlinks = $('.h_nav__item').children('a'),
   $header = $('.h'),
   headerY = $header.outerHeight();
   
