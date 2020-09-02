@@ -40,7 +40,7 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   background: #fff;
-  border: 2px solid #f9344c;
+  border: 2px solid #484848;
   border-radius: 5px;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Verdana", YuGothic, "Hiragino Kaku Gothic Pro", "Yu Gothic Medium", "Yu Gothic", "BIZ UDPGothic", sans-serif;
@@ -120,7 +120,7 @@ link color
 -------------------- */
 
 a {
-  color: #212121;
+  color: #3A3A3A;
   text-decoration: none;
 }
 
@@ -180,7 +180,7 @@ header
 }
 
 .h_logo__link {
-  color: #f9344c;
+  color: #484848;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -220,7 +220,7 @@ header
 }
 
 .h_nav a:after {
-  background: #f9344c;
+  background: #484848;
   bottom: -0.2em;
   content: '';
   display: block;
@@ -295,7 +295,7 @@ Footer
 ***************************************/
 
 .f {
-  background: #1f1f1f;
+  background: #707070;
 }
 
 .f_container {
@@ -450,7 +450,7 @@ Background color
 }
 
 .theme_color {
-  background: #f9344c;
+  background: #484848;
 }
 
 /***************************************
@@ -477,7 +477,7 @@ Common tittles
 ***************************************/
 
 .main_title {
-  color: #212121;
+  color: #3A3A3A;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -499,7 +499,7 @@ Common tittles
 }
 
 .branch_main_title {
-  color: #212121;
+  color: #3A3A3A;
   font-size: 46px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -523,8 +523,8 @@ Buttons
 ***************************************/
 
 .main_button {
-  background: #f9344c;
-  border: 2px solid #f9344c;
+  background: #484848;
+  border: 2px solid #484848;
   border-radius: 5px;
   color: #fff;
   display: block;
@@ -539,7 +539,7 @@ Buttons
 .main_button:hover,
 .main_button:focus {
   background: #fff;
-  color: #222;
+  color: #484848;
   text-decoration: none;
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -701,7 +701,7 @@ Philosophy/index
 }
 
 .top .philosophy__title_text--sub {
-  color: #f9344c;
+  color: #484848;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -753,7 +753,7 @@ Service/index
 }
 
 .top .service_card__title {
-  color: #f9344c;
+  color: #484848;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -792,7 +792,7 @@ News/index
 }
 
 .top .news_list__date {
-  color: #f9344c;
+  color: #484848;
   flex: 0 1 100px;
   margin-right: 16px;
 }
@@ -823,7 +823,7 @@ Contact/index
 
 .top .contact__button {
   background: #fff;
-  border: 1px solid #f9344c;
+  border: 1px solid #484848;
   border-radius: 5px;
   display: block;
   font-size: 16px;
@@ -838,7 +838,7 @@ Contact/index
 
 .top .contact__button:hover,
 .top .contact__button:focus {
-  background: #f9344c;
+  background: #484848;
   border-color: #fff;
   color: #fff;
   text-decoration: none;
@@ -863,7 +863,7 @@ About
 }
 
 .about .about_title {
-  color: #f9344c;
+  color: #484848;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -873,7 +873,7 @@ About
 }
 
 .about .about_title--sub {
-  color: #212121;
+  color: #3A3A3A;
   display: block;
   font-size: 16px;
   font-weight: 500;
@@ -989,7 +989,7 @@ About
 }
 
 .about .address__title {
-  color: #f9344c;
+  color: #484848;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1020,13 +1020,13 @@ About
 }
 
 .about .branch__title {
-  color: #212121;
+  color: #3A3A3A;
   font-size: 24px;
   margin-bottom: 56px;
 }
 
 .about .branch__name {
-  color: #f9344c;
+  color: #484848;
   font-size: 18px;
   font-weight: 700;
 }
@@ -1082,15 +1082,20 @@ Contact
   padding: 40px 0 0;
 }
 
+.contact .section__header-icon {
+  display: block;
+  height: 36px;
+  margin: 0 auto 20px;
+  width: 36px;
+}
+
 .contact .section__header-icon svg {
   display: block;
-  height: 40px;
-  margin: 0 auto 20px;
-  width: 40px;
+  margin: 0 auto;
 }
 
 .contact .section__header-icon svg path {
-  fill: #f9344c;
+  fill: #484848;
 }
 
 .contact .section__ttl {
@@ -1174,7 +1179,7 @@ Contact
 }
 
 .contact .form__btn .btn {
-  background: #f9344c;
+  background: #484848;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -1221,8 +1226,8 @@ Contact
 }
 
 .contact .form__back-btn:before {
-  border-left: 2px solid #f9344c;
-  border-top: 2px solid #f9344c;
+  border-left: 2px solid #484848;
+  border-top: 2px solid #484848;
   content: '';
   display: inline-block;
   height: 8px;
@@ -1371,7 +1376,7 @@ Privacy policy
   }
 
   .h_nav {
-    background: #f9344c;
+    background: #484848;
     box-sizing: border-box;
     color: #fff;
     display: none;
@@ -1410,7 +1415,7 @@ Privacy policy
 
   .h_nav__hamburger_icon:before,
   .h_nav__hamburger_icon:after {
-    background: #f9344c;
+    background: #484848;
     content: " ";
     height: 2px;
     left: 0;
