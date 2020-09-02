@@ -1078,20 +1078,19 @@ Contact
   font-weight: 600;
 }
 
-.contact .section__header-msg:before {
-  background-image: url(../image/icon_form-complete.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: '';
+.contact .section__header-msg + .s__header-text {
+  padding: 40px 0 0;
+}
+
+.contact .section__header-icon svg {
   display: block;
   height: 40px;
   margin: 0 auto 20px;
   width: 40px;
 }
 
-.contact .section__header-msg + .s__header-text {
-  padding: 40px 0 0;
+.contact .section__header-icon svg path {
+  fill: #f9344c;
 }
 
 .contact .section__ttl {
@@ -1222,8 +1221,8 @@ Contact
 }
 
 .contact .form__back-btn:before {
-  border-left: 2px solid #484848;
-  border-top: 2px solid #484848;
+  border-left: 2px solid #f9344c;
+  border-top: 2px solid #f9344c;
   content: '';
   display: inline-block;
   height: 8px;

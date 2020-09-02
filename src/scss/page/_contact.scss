@@ -36,22 +36,22 @@ Contact
             font-size: 18px;
           }
         }
-        &:before {
-          content: '';
-          display: block;
-          width: 40px;
-          height: 40px;
-          background-image: url(../image/icon_form-complete.svg);
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-position: center;
-          margin: 0 auto 20px;
-        }
         + .s__header-text {
           padding: 40px 0 0;
           @include mq {
             padding: 32px 0 0;
           }
+        }
+      }
+
+      &-icon svg{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 20px;
+
+        path {
+          fill: $color-secondary;
         }
       }
     }
@@ -210,8 +210,8 @@ Contact
         display: inline-block;
         width: 8px;
         height: 8px;
-        border-left: 2px solid #484848;
-        border-top: 2px solid #484848;
+        border-left: 2px solid $color-secondary;
+        border-top: 2px solid $color-secondary;
         transform: rotate(-45deg);
         margin-right: 15px;
         z-index: 1;
