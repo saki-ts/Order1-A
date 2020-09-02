@@ -31,6 +31,7 @@ header
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 80px;
     padding: 8px 56px;
     margin: 0 auto;
     max-width: 1552px;
@@ -38,6 +39,7 @@ header
 
     @include mq() {
       max-width: 100%;
+      min-height: 60px;
       padding: 8px 20px;
       position: relative;
     }

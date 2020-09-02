@@ -176,12 +176,6 @@ Contact
           text-decoration: none;
         }
       }
-
-      span {
-        &:first-child:not(:last-child) {
-          padding-bottom: 50px;
-        }
-      }
     }
 
     &__back-input {
@@ -206,6 +200,7 @@ Contact
       font-size: 15px;
       margin: 0 auto;
       position: relative;
+      padding-top: 50px;
       height: 30px;
       @include mq {
         font-size: 14px;
@@ -258,6 +253,14 @@ Contact
         color: #dbdbdb;
       }
     }
+  }
+
+  div.wpcf7 .ajax-loader {
+    position: absolute;
+    top: -2em;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
   .js-confirm {
