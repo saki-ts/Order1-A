@@ -40,7 +40,7 @@ textarea {
   -moz-appearance: none;
   appearance: none;
   background: #fff;
-  border: 2px solid #484848;
+  border: 2px solid #f9344c;
   border-radius: 5px;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Verdana", YuGothic, "Hiragino Kaku Gothic Pro", "Yu Gothic Medium", "Yu Gothic", "BIZ UDPGothic", sans-serif;
@@ -120,7 +120,7 @@ link color
 -------------------- */
 
 a {
-  color: #3A3A3A;
+  color: #212121;
   text-decoration: none;
 }
 
@@ -180,7 +180,7 @@ header
 }
 
 .h_logo__link {
-  color: #484848;
+  color: #f9344c;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -220,7 +220,7 @@ header
 }
 
 .h_nav a:after {
-  background: #484848;
+  background: #f9344c;
   bottom: -0.2em;
   content: '';
   display: block;
@@ -279,12 +279,12 @@ SP menu opened
 }
 
 .js-nav-trigger .h_nav__hamburger_icon:before {
-  top: 0;
+  top: -5px;
   transform: rotateZ(45deg);
 }
 
 .js-nav-trigger .h_nav__hamburger_icon:after {
-  top: 0;
+  top: -5px;
   transform: rotateZ(-45deg);
 }
 
@@ -295,7 +295,7 @@ Footer
 ***************************************/
 
 .f {
-  background: #707070;
+  background: #1f1f1f;
 }
 
 .f_container {
@@ -449,8 +449,8 @@ Background color
   background: #F7F7F7;
 }
 
-.bg_theme_color {
-  background: #484848;
+.theme_color {
+  background: #f9344c;
 }
 
 /***************************************
@@ -477,7 +477,7 @@ Common tittles
 ***************************************/
 
 .main_title {
-  color: #3A3A3A;
+  color: #212121;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -499,7 +499,7 @@ Common tittles
 }
 
 .branch_main_title {
-  color: #3A3A3A;
+  color: #212121;
   font-size: 46px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -523,8 +523,8 @@ Buttons
 ***************************************/
 
 .main_button {
-  background: #484848;
-  border: 2px solid #484848;
+  background: #f9344c;
+  border: 2px solid #f9344c;
   border-radius: 5px;
   color: #fff;
   display: block;
@@ -539,7 +539,7 @@ Buttons
 .main_button:hover,
 .main_button:focus {
   background: #fff;
-  color: #484848;
+  color: #f9344c;
   text-decoration: none;
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -586,9 +586,9 @@ First view/index
 }
 
 .top .first_view__image {
-  height: 100vh;
   left: 0;
   margin: auto;
+  min-width: 1440px;
   position: absolute;
   right: 0;
   top: 0;
@@ -701,7 +701,7 @@ Philosophy/index
 }
 
 .top .philosophy__title_text--sub {
-  color: #484848;
+  color: #f9344c;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -725,7 +725,6 @@ Service/index
 ***************************************/
 
 .top .service {
-  background: #F7F7F7;
   padding: 120px 0;
 }
 
@@ -754,7 +753,7 @@ Service/index
 }
 
 .top .service_card__title {
-  color: #484848;
+  color: #f9344c;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -793,7 +792,7 @@ News/index
 }
 
 .top .news_list__date {
-  color: #484848;
+  color: #f9344c;
   flex: 0 1 100px;
   margin-right: 16px;
 }
@@ -809,7 +808,6 @@ Contact/index
 ***************************************/
 
 .top .contact {
-  background: #484848;
   padding: 96px 0;
 }
 
@@ -825,7 +823,7 @@ Contact/index
 
 .top .contact__button {
   background: #fff;
-  border: 1px solid #484848;
+  border: 1px solid #f9344c;
   border-radius: 5px;
   display: block;
   font-size: 16px;
@@ -840,7 +838,7 @@ Contact/index
 
 .top .contact__button:hover,
 .top .contact__button:focus {
-  background: #484848;
+  background: #f9344c;
   border-color: #fff;
   color: #fff;
   text-decoration: none;
@@ -865,7 +863,7 @@ About
 }
 
 .about .about_title {
-  color: #3A3A3A;
+  color: #f9344c;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -875,6 +873,7 @@ About
 }
 
 .about .about_title--sub {
+  color: #212121;
   display: block;
   font-size: 16px;
   font-weight: 500;
@@ -990,6 +989,7 @@ About
 }
 
 .about .address__title {
+  color: #f9344c;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1020,11 +1020,13 @@ About
 }
 
 .about .branch__title {
+  color: #212121;
   font-size: 24px;
   margin-bottom: 56px;
 }
 
 .about .branch__name {
+  color: #f9344c;
   font-size: 18px;
   font-weight: 700;
 }
@@ -1173,7 +1175,7 @@ Contact
 }
 
 .contact .form__btn .btn {
-  background: #484848;
+  background: #f9344c;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -1370,7 +1372,7 @@ Privacy policy
   }
 
   .h_nav {
-    background: #484848;
+    background: #f9344c;
     box-sizing: border-box;
     color: #fff;
     display: none;
@@ -1409,13 +1411,9 @@ Privacy policy
 
   .h_nav__hamburger_icon:before,
   .h_nav__hamburger_icon:after {
-    background: #484848;
-    height: 2px;
-  }
-
-  .h_nav__hamburger_icon:before,
-  .h_nav__hamburger_icon:after {
+    background: #f9344c;
     content: " ";
+    height: 2px;
     left: 0;
     position: absolute;
     top: -10px;
@@ -1560,6 +1558,7 @@ Privacy policy
   }
 
   .top .first_view__image {
+    min-width: auto;
     transform: scale(1.5);
   }
 

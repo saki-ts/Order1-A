@@ -51,6 +51,7 @@ const paths = {
   ],
   ignoreScssSrc: [
     "src/scss/*.scss",
+    "src/scss/**/*.scss",
     "!src/scss/**/(_)*.scss"
   ],
   stylusSrc: ['stylus/*.styl','!stylus/_*.styl'],

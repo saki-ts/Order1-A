@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@import "../foundation/_import";
+/*
+* Theme name:Order1-A
+* Theme Color:red
+* Description: This is Order1-A theme.Theme color red version.
+* Version: 1.0
+*/
+
+$color-primary:#212121;
+$color-secondary:#f9344c;
+$color-footer:#1f1f1f;
+$color-black: #222;
+
+/***************************************
+
+Common
+
+***************************************/
+
+/* --------------------
+link color
+-------------------- */
+a{
+  color: $color-primary;
+}
+
+.theme_color {
+  background: $color-secondary;
+}
+
+.main {
+  &_button {
+    background: $color-secondary;
+    border-color:$color-secondary;
+    color: $color-white;
+
+    &:hover,&:focus {
+      background: $color-white;
+      color: $color-secondary;
+    }
+  }
+}
+
+/***************************************
+
+Header
+
+***************************************/
+.h {
+  &_logo {
+    &__link {
+      color: $color-secondary;;
+    }
+  }
+  &_nav {
+    background: $color-secondary;
+
+    &__hamburger {
+      &_icon {
+        &:before,
+        &:after{
+          background: $color-secondary;
+        }
+      }
+    }
+  }
+}
+
+/***************************************
+
+Footer
+
+***************************************/
+.f {
+  background: $color-footer;
+}
+
+
+/***************************************
+
+index
+
+***************************************/
+.top {
+	.philosophy {
+		&__title {
+      &_text {
+        &--sub {
+          color: $color-secondary;
+        }
+      }
+    }
+	}
+
+  .service {
+    &_card {
+      &__title {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .news {
+    &_list {
+      &__date {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .contact {
+    &__button {
+      border-color: $color-white;
+
+      &:hover,&:focus {
+        background: $color-secondary;
+        border-color: $color-white;
+      }
+    }
+  }
+}

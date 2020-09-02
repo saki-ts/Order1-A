@@ -74,11 +74,12 @@ First view/index
       top: 0;
       left: 0;
       right: 0;
+      min-width: 1440px;
       width: 100vw;
-      height: 100vh;
       z-index: -1;
 
       @include mq() {
+        min-width: auto;
         transform: scale(1.5);
       }
     }
@@ -205,7 +206,6 @@ Service/index
 ***************************************/
 .top {
   .service {
-    background: $color-gray2;
     padding: 120px 0;
 
     @include mq() {
@@ -345,7 +345,6 @@ Contact/index
 ***************************************/
 .top {
   .contact {
-    background: $color-secondary;
     padding: 96px 0;
 
     @include mq() {
