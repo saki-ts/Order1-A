@@ -174,6 +174,7 @@ header
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1552px;
+  min-height: 80px;
   padding: 8px 56px;
   width: 100%;
 }
@@ -278,12 +279,12 @@ SP menu opened
 }
 
 .js-nav-trigger .h_nav__hamburger_icon:before {
-  top: 0;
+  top: -5px;
   transform: rotateZ(45deg);
 }
 
 .js-nav-trigger .h_nav__hamburger_icon:after {
-  top: 0;
+  top: -5px;
   transform: rotateZ(-45deg);
 }
 
@@ -448,7 +449,7 @@ Background color
   background: #F7F7F7;
 }
 
-.bg_theme_color {
+.theme_color {
   background: #484848;
 }
 
@@ -585,9 +586,9 @@ First view/index
 }
 
 .top .first_view__image {
-  height: 100vh;
   left: 0;
   margin: auto;
+  min-width: 1440px;
   position: absolute;
   right: 0;
   top: 0;
@@ -724,7 +725,6 @@ Service/index
 ***************************************/
 
 .top .service {
-  background: #F7F7F7;
   padding: 120px 0;
 }
 
@@ -808,7 +808,6 @@ Contact/index
 ***************************************/
 
 .top .contact {
-  background: #484848;
   padding: 96px 0;
 }
 
@@ -864,7 +863,7 @@ About
 }
 
 .about .about_title {
-  color: #3A3A3A;
+  color: #484848;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -874,6 +873,7 @@ About
 }
 
 .about .about_title--sub {
+  color: #3A3A3A;
   display: block;
   font-size: 16px;
   font-weight: 500;
@@ -989,6 +989,7 @@ About
 }
 
 .about .address__title {
+  color: #484848;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1019,11 +1020,13 @@ About
 }
 
 .about .branch__title {
+  color: #3A3A3A;
   font-size: 24px;
   margin-bottom: 56px;
 }
 
 .about .branch__name {
+  color: #484848;
   font-size: 18px;
   font-weight: 700;
 }
@@ -1075,20 +1078,24 @@ Contact
   font-weight: 600;
 }
 
-.contact .section__header-msg:before {
-  background-image: url(../image/icon_form-complete.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: '';
-  display: block;
-  height: 40px;
-  margin: 0 auto 20px;
-  width: 40px;
-}
-
 .contact .section__header-msg + .s__header-text {
   padding: 40px 0 0;
+}
+
+.contact .section__header-icon {
+  display: block;
+  height: 36px;
+  margin: 0 auto 20px;
+  width: 36px;
+}
+
+.contact .section__header-icon svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.contact .section__header-icon svg path {
+  fill: #484848;
 }
 
 .contact .section__ttl {
@@ -1191,10 +1198,6 @@ Contact
   text-decoration: none;
 }
 
-.contact .form__btn span:first-child:not(:last-child) {
-  padding-bottom: 50px;
-}
-
 .contact .form__back-input {
   border: none;
   display: inline-block;
@@ -1217,6 +1220,7 @@ Contact
   font-weight: 500;
   height: 30px;
   margin: 0 auto;
+  padding-top: 50px;
   position: relative;
   width: 168px;
 }
@@ -1307,6 +1311,14 @@ Contact
   color: #dbdbdb;
 }
 
+.contact div.wpcf7 .ajax-loader {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -2em;
+}
+
 .contact .js-confirm {
   display: none;
 }
@@ -1350,6 +1362,7 @@ Privacy policy
 @media screen and (max-width: 960px) {
   .h_container {
     max-width: 100%;
+    min-height: 60px;
     padding: 8px 20px;
     position: relative;
   }
@@ -1403,12 +1416,8 @@ Privacy policy
   .h_nav__hamburger_icon:before,
   .h_nav__hamburger_icon:after {
     background: #484848;
-    height: 2px;
-  }
-
-  .h_nav__hamburger_icon:before,
-  .h_nav__hamburger_icon:after {
     content: " ";
+    height: 2px;
     left: 0;
     position: absolute;
     top: -10px;
@@ -1553,6 +1562,7 @@ Privacy policy
   }
 
   .top .first_view__image {
+    min-width: auto;
     transform: scale(1.5);
   }
 

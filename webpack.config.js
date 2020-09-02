@@ -18,8 +18,7 @@ module.exports = {
   // メインのJS
   entry: {
     common: "./src/js/common.js",
-    top: "./src/js/top.js",
-    about: "./src/js/about.js"
+    top: "./src/js/top.js"
   },
 
   // 出力ファイル

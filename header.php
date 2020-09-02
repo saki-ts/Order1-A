@@ -11,11 +11,6 @@
 <?php else : ?>
 <body class='<?php echo $pageClass; ?>'>
 <?php endif; ?>
-<style>
-#wpadminbar {
-  display:none !important;
-}
-</style>
   <div class="allwrapper">
     <header class="h js-sticky">
       <div class="h_container">
