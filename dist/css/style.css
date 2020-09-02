@@ -539,7 +539,7 @@ Buttons
 .main_button:hover,
 .main_button:focus {
   background: #fff;
-  color: #f9344c;
+  color: #222;
   text-decoration: none;
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
