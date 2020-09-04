@@ -103,7 +103,7 @@
 <section class="contact theme_color">
 	<div class="container wrapper">
 		<h2 class="main_title main_title--white contact__title">Contact<span class="main_title--sub">お問い合わせ</span></h2>
-		<p class="contact__text">お気軽にご相談ください</p><a class="contact__button" href="<?php bloginfo('url');?>/contact">お問い合わせはこちら</a>
+		<p class="contact__text">お気軽にご相談ください</p><a class="contact__button" href="<?php bloginfo('url');?>/contact">お問い合わせはコチラ</a>
 	</div>
 </section>
 <?php get_footer(); ?>

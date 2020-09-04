@@ -779,6 +779,7 @@ News/index
 }
 
 .top .news_list__link {
+  color: #484848;
   display: flex;
 }
 
@@ -798,6 +799,7 @@ News/index
 }
 
 .top .news_list__text {
+  color: #222;
   font-weight: 500;
 }
 
@@ -825,6 +827,7 @@ Contact/index
   background: #fff;
   border: 1px solid #484848;
   border-radius: 5px;
+  color: #484848;
   display: block;
   font-size: 16px;
   font-weight: 700;

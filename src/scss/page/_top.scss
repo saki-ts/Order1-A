@@ -309,6 +309,7 @@ News/index
       }
 
       &__link {
+        color: $color-secondary;
         display: flex;
 
         @include mq() {
@@ -333,6 +334,7 @@ News/index
       }
 
       &__text {
+        color: $color-black;
         font-weight: 500;
       }
     }
@@ -368,6 +370,7 @@ Contact/index
       background: $color-white;
       border: 1px solid $color-secondary;
       border-radius: 5px;
+      color: $color-secondary;
       display: block;
       font-size: 16px;
       font-weight: 700;
