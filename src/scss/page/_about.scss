@@ -133,10 +133,6 @@ About
       bottom: 0;
       width: 100vw;
       z-index: -1;
-
-      @include mq {
-        height: 80vh;
-      }
     }
   }
 
