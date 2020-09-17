@@ -68,6 +68,10 @@ About
         display: block;
       }
 
+      &--1col {
+        justify-content: center;
+      }
+
       &_img {
         max-width: 426px;
         width: 100%;

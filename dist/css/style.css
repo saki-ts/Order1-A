@@ -892,6 +892,10 @@ About
   display: flex;
 }
 
+.about .msg__body--1col {
+  justify-content: center;
+}
+
 .about .msg__body_img {
   margin-right: 56px;
   max-width: 426px;

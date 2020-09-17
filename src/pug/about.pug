@@ -17,7 +17,8 @@ html(lang="ja")
             h2.about_title Message
               span.about_title--sub 代表挨拶
 
-            .msg__body
+            // 宣材写真が不要な場合は<div class="msg__body">に対し、次のクラス名を追加してください。「msg__body--1col」
+            .msg__body.msg__body--1col
               figure.msg__body_img
                 img(src="../image/about_msg.jpg", alt="代表写真")
 
