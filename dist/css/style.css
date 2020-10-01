@@ -890,6 +890,7 @@ About
 
 .about .msg__body {
   display: flex;
+  justify-content: center;
 }
 
 .about .msg__body_img {
