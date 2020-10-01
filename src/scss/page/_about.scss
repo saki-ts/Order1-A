@@ -63,13 +63,10 @@ About
   .msg {
     &__body {
       display: flex;
+      justify-content: center;
 
       @include mq {
         display: block;
-      }
-
-      &--1col {
-        justify-content: center;
       }
 
       &_img {
