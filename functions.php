@@ -105,6 +105,7 @@ remove_submenu_page( 'themes.php', 'themes.php' ); // テーマ
 remove_submenu_page( 'themes.php', 'theme-editor.php' ); // テーマ直編集エディタ
 remove_submenu_page( 'themes.php', 'nav-menus.php' ); // メニュー
 remove_menu_page('wpcf7'); // お問い合わせ
+remove_menu_page('wp-structuring-markup/wp-structuring-markup.php'); // Schema.org
 remove_submenu_page('options-general.php', 'options-reading.php'); // 表示設定
 remove_submenu_page('options-general.php', 'options-writing.php'); // 投稿設定
 remove_submenu_page('options-general.php', 'options-media.php' ); // メディア設定
