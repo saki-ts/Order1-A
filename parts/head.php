@@ -9,6 +9,7 @@
   <meta name="format-detection" content="telephone=no">
   <title><?php bloginfo('name');?></title>
   <link rel="canonical" href="<?php bloginfo('url');?>">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="<?php echo $themePath; ?>css/reset.css">
   <link rel="stylesheet" href="<?php echo $themePath; ?>css/style.css">
   <link rel="shortcut icon" href="<?php echo $themePath; ?>favicon.ico">
