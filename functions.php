@@ -92,7 +92,7 @@ add_action( 'admin_menu', 'remove_menus', 999 );
 function remove_menus(){
   global $current_user;
 
-  if(!($current_user->user_login=="tech_admin" or $current_user->user_login=="order1a_admin")) {
+  if(!($current_user->user_login=="tech_admin")) {
     remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=category' ); // カテゴリー
     remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' ); // タグ
     remove_menu_page( 'edit-comments.php' ); //コメント
