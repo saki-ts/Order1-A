@@ -13,6 +13,17 @@ head
 	link(href=css.wf_noto rel="stylesheet")
 	link(href=css.reset rel="stylesheet")
 	link(href=css.style rel="stylesheet")
+	<!-- OGP -->
+	meta(property="og:title" content=page.title)
+	meta(property="og:description" content=page.description)
+	meta(property="og:type" content="website")
+	meta(property="og:locale" content="ja_JP")
+	meta(property="og:url" content=page.url)
+	meta(property="og:image" content="ogp.jpg")
+	meta(property="og:image:width" content="1200px")
+	meta(property="og:image:height" content="630px")
+	meta(property="fb:app_id" content="")
+	<!-- / OGP -->
 	title !{page.title}
 	if isContact
 		script.
