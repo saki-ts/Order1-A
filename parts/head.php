@@ -7,7 +7,15 @@
   <meta name="keywords" content="キーワード1,キーワード2,キーワード3">
   <meta name="description" content="<?php bloginfo('description');?>">
   <meta name="format-detection" content="telephone=no">
-  <title><?php bloginfo('name');?></title>
+  <?php if(is_front_page()) : ?>
+    <title><?php bloginfo('name');?>｜TOP</title>
+  <?php elseif(is_page('about')) : ?>
+    <title><?php bloginfo('name');?>｜会社情報</title>
+  <?php elseif(is_page('contact')) : ?>
+    <title><?php bloginfo('name');?>｜お問い合わせ</title>
+  <?php elseif(is_page('privacy')) : ?>
+    <title><?php bloginfo('name');?>｜プライバシーポリシー</title>
+  <?php endif; ?>
   <link rel="canonical" href="<?php bloginfo('url');?>">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="<?php echo $themePath; ?>css/reset.css">
