@@ -12,8 +12,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="<?php echo $themePath; ?>css/reset.css">
   <link rel="stylesheet" href="<?php echo $themePath; ?>css/style.css">
-  <link rel="shortcut icon" href="<?php echo $themePath; ?>favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $themePath; ?>apple-touch-icon.png">
+  <link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo bloginfo('template_directory'); ?>/apple-touch-icon.png">
+  <!-- OGP -->
+  <meta property="og:title" content="<?php bloginfo('description');?>">
+  <meta property="og:description" content="<?php bloginfo('description');?>">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="<?php bloginfo('url');?>">
+  <meta property="og:image" content="<?php echo bloginfo('template_directory'); ?>/ogp.jpg">
+  <meta property="og:image:width" content="1200px">
+  <meta property="og:image:height" content="630px">
+  <meta property="fb:app_id" content="">
+  <!-- / OGP -->
   <?php if(is_page('contact')): ?>
     <script>
     // お問い合わせ iosで拡大防止

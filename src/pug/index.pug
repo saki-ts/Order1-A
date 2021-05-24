@@ -42,19 +42,43 @@ html(lang="ja")
 
               a.main_button(href="about.html") View More
 
+        section.about
+          .about__parallax
+            img.about__parallax_img.pc_show(src="../image/about_parallax@2x.jpg")
+            img.about__parallax_img.sp_show(src="../image/about_parallax_sp2@2x.jpg")
+
         section#service.service.bg_gray
           .container.wrapper
             h2.main_title Service
               span.main_title--sub 事業内容
 
             ul.service__card
-              - for (var i = 0; i < 4; i++)
+              -
+                var serviceArray = [
+                  {
+                    img: 'image/card_image.jpg',
+                    title: '見出しテキスト',
+                    desc:  'ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。',
+                  },
+                  {
+                    img: 'image/card_image.jpg',
+                    title: '見出しテキスト',
+                    desc:  'ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。',
+                  },
+                  {
+                    img: 'image/card_image.jpg',
+                    title: '見出しテキスト',
+                    desc:  'ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。',
+                  },
+                ];
+
+              each service in serviceArray
                 li.service_card__item
                   figure.service_card__image_wrapper
-                    img.service_card__image(src="../image/card_image.jpg", alt="ここに画像が入ります。")
+                    img.service_card__image(src=`${service.img}`, alt=`${service.title}`+"のイメージ")
                   .service_card__body
-                    h3.service_card__title 見出しテキスト
-                    p.service_card__text ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。
+                    h3.service_card__title !{service.title}
+                    p.service_card__text !{service.desc}
 
         section#news.news.bg_white
           .container.wrapper

@@ -1,7 +1,7 @@
 <?php
   $themePath = get_template_directory_uri().'/dist/';
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="<?php echo $themePath; ?>js/common.bundle.js"></script>
 
 <?php if(is_front_page()) : ?>

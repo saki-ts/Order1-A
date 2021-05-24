@@ -49,7 +49,9 @@ html(lang="ja")
                   a(href='privacy.html') プライバシーポリシー
                   | をご確認の上、下記ボタンより先にお進みください。
               .form__btn
-                span.form__btn-wrapper
-                  button.btn 確認画面へ
+                .form__btn-wrapper
+                  p.btn
+                    input.btn.wpcf7-form-control.wpcf7-confirm.wpcf7c-elm-step1.wpcf7c-btn-confirm(type="submit" value="確認画面へ")
+                    <svg class="main_button__icon" xmlns="http://www.w3.org/2000/svg" width="13.76" height="13.017" viewBox="0 0 13.76 13.017"><g id="btn-arrow" transform="translate(-356.49 -30.377)"><path class="main_button__icon_path main_button__icon_path--round" d="M-6121.36,9120.088l5.095,5.1-4.458,4.457-.637.636" transform="translate(6485.515 -9088.297)"></path><path class="main_button__icon_path" path d="M-3241.419,1816.734h9.874" transform="translate(3598.908 -1779.849)"></path></g></svg>
 
     include _element/_footer.pug

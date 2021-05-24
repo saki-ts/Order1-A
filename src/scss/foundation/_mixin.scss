@@ -2,6 +2,7 @@
 // media query
 // ***************************************/
 $breakpoints: (
+  'max-374': 'screen and (max-width: 374px)',
   'max-375': 'screen and (max-width: 375px)',
   'max-480': 'screen and (max-width: 480px)',
   'min-481': 'screen and (min-width: 481px)',

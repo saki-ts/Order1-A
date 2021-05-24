@@ -50,7 +50,6 @@
   get_template_part( 'parts/scripts' );
   wp_footer();
 ?>
-
 </body>
 
 </html>

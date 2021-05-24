@@ -544,6 +544,35 @@ Buttons
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.main_button__icon {
+  bottom: 0;
+  height: 14px;
+  left: auto;
+  margin: auto auto auto 0.5em;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 18px;
+}
+
+.main_button__icon_path {
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: #fff;
+  fill: none;
+}
+
+.main_button__icon_path_color--green {
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: #484848;
+  fill: none;
+}
+
+.main_button__icon_path--round {
+  stroke-linejoin: round;
+}
+
 /***************************************
 
 First view/index
@@ -586,6 +615,8 @@ First view/index
 }
 
 .top .first_view__image {
+  -webkit-filter: blur(4px) brightness(80%) saturate(200%);
+  filter: blur(4px) brightness(80%) saturate(200%);
   left: 0;
   margin: auto;
   min-width: 1440px;
@@ -1192,7 +1223,8 @@ Contact
   font-weight: 500;
   height: 72px;
   letter-spacing: 0.05em;
-  max-width: 420px;
+  margin: 0 auto 20px;
+  position: relative;
   transition: all .4s;
   width: 100%;
 }
@@ -1202,18 +1234,12 @@ Contact
   text-decoration: none;
 }
 
-.contact .form__back-input {
-  border: none;
-  display: inline-block;
-  height: 100%;
-  padding: 0;
+.contact .form__btn .btn__icon {
+  bottom: 0;
+  margin: auto;
   position: absolute;
-  width: 100%;
-}
-
-.contact .form__back-input:focus {
-  background: none;
-  outline: none;
+  right: 20px;
+  top: 0;
 }
 
 .contact .form__back-btn {
@@ -1224,25 +1250,30 @@ Contact
   font-weight: 500;
   height: 30px;
   margin: 0 auto;
-  padding-top: 50px;
   position: relative;
-  width: 168px;
+  width: 100%;
 }
 
-.contact .form__back-btn:before {
-  border-left: 2px solid #484848;
-  border-top: 2px solid #484848;
-  content: '';
+.contact .form__back-icon {
+  bottom: 0;
+  left: 80px;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  transform: translate(0, -25%);
+}
+
+.contact .form__back-input {
+  border: none;
   display: inline-block;
-  height: 8px;
-  margin-right: 15px;
-  transform: rotate(-45deg);
-  width: 8px;
-  z-index: 1;
+  height: 100%;
+  padding: 0;
+  width: 100%;
 }
 
-.contact .form__back-btn .form__back-input {
-  text-indent: 1em;
+.contact .form__back-input:focus {
+  background: none;
+  outline: none;
 }
 
 .contact .form input[type="tel"],
@@ -1791,6 +1822,12 @@ Privacy policy
     font-size: 14px;
   }
 
+  .contact .form__back-icon {
+    left: 40px;
+    top: 0;
+    transform: translate(0, 0);
+  }
+
   .contact .form input[type="tel"],
   .contact .form input[type="email"],
   .contact .form input[type="text"] {
@@ -1826,5 +1863,11 @@ Privacy policy
 @media screen and (max-width: 375px) {
   .top .first_view__image_box {
     height: 75vh;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .contact .form__back-icon {
+    left: 20px;
   }
 }

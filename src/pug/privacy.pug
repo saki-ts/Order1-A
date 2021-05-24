@@ -41,7 +41,7 @@ html(lang="ja")
             | TEL 01-1234-5678
             br
             | 受付時間 平日
-            time(datetime="!{info.opentime}-!{info.closetime}") !{info.opentime}～!{info.closetime}
+            time(datetime=`${info.opentime}`+"～"+`${info.closetime}`) !{info.opentime}～!{info.closetime}
             br
             | ※年末年始・夏季休業（お盆周辺）を除く
     include _element/_footer.pug
