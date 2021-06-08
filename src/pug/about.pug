@@ -43,7 +43,7 @@ html(lang="ja")
             .company__body
               dl.company__list
                 dt.company__name 社名
-                dd.company__dtl 株式会社DEMO Inc.
+                dd.company__dtl !{info.officename}
               dl.company__list
                 dt.company__name 設立
                 dd.company__dtl 2020年7月
@@ -52,12 +52,14 @@ html(lang="ja")
                 dd.company__dtl 小田 一
               dl.company__list
                 dt.company__name 所在地
-                dd.company__dtl 〒123-4567
+                dd.company__dtl !{info.post}
                   br
-                  | 東京都渋谷区渋谷1-1-1オーダービル1F
+                  | !{info.address}
               dl.company__list
                 dt.company__name 電話番号
-                dd.company__dtl 01-1234-5678
+                dd.company__dtl.pc_show !{info.tellphone}
+                dd.company__dtl.sp_show
+                  a(href=`${info.tellphone}`) !{info.tellphone}
               dl.company__list
                 dt.company__name 資本金
                 dd.company__dtl 1億円
@@ -81,9 +83,9 @@ html(lang="ja")
                 p.address__title 東京本社
                 a.main_button.address__button.pc_show(href="#") Google map
               .address__body
-                p.address__text 〒123-4567 
+                p.address__text !{info.post} 
                   br.sp_show
-                  | 東京都渋谷区渋谷1-1-1オーダービル1F
+                  | !{info.address}
                 // 電話番号が必要な場合はここに入力 <p class="address__text">TEL: 0120-1234-5678</p>
               a.main_button.address__button.sp_show(href="#") Google map
 

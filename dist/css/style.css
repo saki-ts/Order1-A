@@ -431,6 +431,18 @@ Switch display
   display: none !important;
 }
 
+.sp_show--ib {
+  display: none !important;
+}
+
+.sp_show--ib--max1440 {
+  display: none !important;
+}
+
+.sp_show--ib--max1024 {
+  display: none !important;
+}
+
 .pc_show {
   display: block !important;
 }
@@ -1394,6 +1406,18 @@ Privacy policy
   font-style: normal;
 }
 
+@media screen and (max-width: 1440px) {
+  .sp_show--ib--max1440 {
+    display: inline-block !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sp_show--ib--max1024 {
+    display: inline-block !important;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .h_container {
     max-width: 100%;
@@ -1546,6 +1570,10 @@ Privacy policy
 
   .m {
     padding-top: 60px;
+  }
+
+  .sp_show--ib {
+    display: inline-block !important;
   }
 
   .sp_show {
