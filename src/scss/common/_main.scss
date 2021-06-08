@@ -43,6 +43,30 @@ Switch display
 ***************************************/
 .sp_show {
   display: none !important;
+
+  &--ib {
+    display: none !important;
+
+    &--max1440 {
+      display: none !important;
+  
+      @include mq(max-1440) {
+        display: inline-block !important;
+      }
+    }
+  
+    &--max1024 {
+      display: none !important;
+  
+      @include mq(max-1024) {
+        display: inline-block !important;
+      }
+    }
+  
+    @include mq() {
+      display: inline-block !important;
+    }
+  }
 }
 
 .pc_show {

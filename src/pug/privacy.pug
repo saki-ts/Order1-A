@@ -12,7 +12,7 @@ html(lang="ja")
           h1.branch_main_title Privacy policy
             span.branch_main_title--sub プライバシーポリシー
 
-          p.privacy__text 株式会社DEMO Inc.（以下、当社）は、当社における個人情報の取扱いに関し、個人情報の保護に関する法律その他の関係法令（以下「個人情報保護法等」といいます。）を遵守するとともに、下記のとおりプライバシーポリシーを定め、その適切な取り扱いに努めています。
+          p.privacy__text !{info.officename} Inc.（以下、当社）は、当社における個人情報の取扱いに関し、個人情報の保護に関する法律その他の関係法令（以下「個人情報保護法等」といいます。）を遵守するとともに、下記のとおりプライバシーポリシーを定め、その適切な取り扱いに努めています。
 
           h2.privacy__contents_title 1.個人情報の取得
           p.privacy__text 当社は、個人情報を適正な手段により取得します。
@@ -36,10 +36,10 @@ html(lang="ja")
           p.privacy__text 当社は、個人情報について、開示、訂正、追加、削除、利用停止、消去、第三者提供の停止又は利用目的の通知に係るご本人からのお申出があった場合 には、お申出頂いた方がご本人であることを確認の上、個人情報保護法等の定めに従い、誠実に対応します。
 
           h3.privacy__contents_title 【お問い合わせ窓口】
-          address.privacy__text.privacy__info 株式会社DEMO Inc.
+          address.privacy__text.privacy__info !{info.officename} Inc.
             br
-            | TEL 01-1234-5678
-            br
+            a.sp_show(href=`tel:${info.tellphone}`) Tel !{info.tellphone} 
+            span.pc_show Tel !{info.tellphone}
             | 受付時間 平日
             time(datetime=`${info.opentime}`+"～"+`${info.closetime}`) !{info.opentime}～!{info.closetime}
             br
