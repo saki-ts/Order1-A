@@ -39,10 +39,10 @@ function img_short_path($cont){
 // ************************************************
 //  投稿画面で本文編集エリアを非表示
 // ************************************************
-add_action( 'init' , 'my_remove_post_editor_support' );
-function my_remove_post_editor_support() {
-  remove_post_type_support( 'post', 'editor' );
-}
+// add_action( 'init' , 'my_remove_post_editor_support' );
+// function my_remove_post_editor_support() {
+//   remove_post_type_support( 'post', 'editor' );
+// }
 
 // ************************************************
 //  アイキャッチ画像の有効化
@@ -89,6 +89,55 @@ function head_Cleaneup() {
   // remove emoji style css
   wp_deregister_script('comment-reply');
 }
+
+// ************************************************
+//  投稿アーカイブページの作成
+// ************************************************
+function post_has_archive( $args, $post_type ) {
+
+	if ( 'post' == $post_type ) {
+		$args['rewrite'] = true;
+		$args['has_archive'] = 'archives'; //任意のスラッグ名
+	}
+	return $args;
+
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+// ************************************************
+//  Admin - サイドメニュー「投稿」の表記変更
+// ************************************************
+
+function change_post_menu_label() {
+
+	global $menu;
+	global $submenu;
+	$menu[5][0] = 'ニュース';
+	$submenu['edit.php'][5][0] = 'ニュース一覧';
+	$submenu['edit.php'][10][0] = '新しいニュースを作成';
+	$submenu['edit.php'][16][0] = 'タグ';
+
+}
+
+function change_post_object_label() {
+
+	global $wp_post_types;
+	$labels = &$wp_post_types['post']->labels;
+	$labels->name = 'ニュース';
+	$labels->singular_name = 'ニュース';
+	$labels->add_new = _x('追加', 'ニュース');
+	$labels->add_new_item = 'ニュースの新規追加';
+	$labels->edit_item = 'ニュースの編集';
+	$labels->new_item = '新規ニュース';
+	$labels->view_item = 'ニュースを表示';
+	$labels->search_items = 'ニュースを検索';
+	$labels->not_found = '記事が見つかりませんでした';
+	$labels->not_found_in_trash = 'ゴミ箱に記事は見つかりませんでした';
+
+}
+
+add_action( 'init', 'change_post_object_label' );
+add_action( 'admin_menu', 'change_post_menu_label' );
 
 // ************************************************
 //  ADMIN - LEFT SIDE MENU

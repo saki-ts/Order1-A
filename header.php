@@ -8,6 +8,10 @@
 <?php get_template_part( 'parts/head' ); ?>
 <?php if(is_front_page()):?>
 <body class='top'>
+<?php elseif( is_singular( 'post' ) ) : ?>
+<body class='single'>
+<?php elseif( is_archive( 'post' ) ) : ?>
+<body class='archive'>
 <?php else : ?>
 <body class='<?php echo $pageClass; ?>'>
 <?php endif; ?>

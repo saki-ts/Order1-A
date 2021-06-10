@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: ORder1-A theme
+ * Template Name: 固定ページ
  */
 get_header();
 ?>
