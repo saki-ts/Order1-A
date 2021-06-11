@@ -1138,7 +1138,6 @@ Archive
 .archive__text {
   color: #222;
   flex: 0 1 calc(100% - 100px);
-  font-size: 1.6rem;
   font-weight: 500;
 }
 
@@ -1890,6 +1889,14 @@ Privacy policy
 
   .about .branch__map {
     height: 240px;
+  }
+
+  .archive__header {
+    padding-top: 36px;
+  }
+
+  .archive__cont {
+    display: block;
   }
 
   .archive__pager .page-numbers {
