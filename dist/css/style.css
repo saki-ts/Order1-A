@@ -846,6 +846,10 @@ News/index
   font-weight: 500;
 }
 
+.top .news__more_button {
+  margin-top: 40px;
+}
+
 /***************************************
 
 Contact/index
@@ -1092,6 +1096,100 @@ About
   margin-right: 0;
   padding: 4px 12px;
   width: 120px;
+}
+
+/***************************************
+
+Archive
+
+***************************************/
+
+.archive__header {
+  padding-top: 136px;
+}
+
+.archive__topics {
+  padding-bottom: 120px;
+}
+
+.archive__card {
+  border-bottom: 1px solid #DBDBDB;
+  padding: 16px 0;
+}
+
+.archive__link {
+  display: block;
+}
+
+.archive__cont {
+  display: flex;
+}
+
+.archive__cont * {
+  flex-shrink: 0;
+}
+
+.archive__date {
+  color: #484848;
+  flex: 0 1 100px;
+  margin-right: 16px;
+}
+
+.archive__text {
+  color: #222;
+  flex: 0 1 calc(100% - 100px);
+  font-weight: 500;
+}
+
+/* --------------------
+pager
+-------------------- */
+
+/* 自動生成されるページャータイトルを非表示 */
+
+.archive .screen-reader-text {
+  display: none !important;
+}
+
+.archive__pager {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.archive__pager .nav-links {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.archive__pager .page-numbers {
+  background: #fff;
+  border-radius: 4px;
+  color: #3A3A3A;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: 0.3s;
+  width: 40px;
+}
+
+.archive__pager .page-numbers:not(:first-child) {
+  margin-left: 12px;
+}
+
+.archive__pager .page-numbers:not(.dots) {
+  border: 1px solid #484848;
+}
+
+.archive__pager .page-numbers:hover:not(.dots) {
+  background: #484848;
+  color: #fff;
+  text-decoration: none;
+}
+
+.archive__pager .page-numbers.current {
+  background: #484848;
+  color: #fff;
 }
 
 /***************************************
@@ -1791,6 +1889,21 @@ Privacy policy
 
   .about .branch__map {
     height: 240px;
+  }
+
+  .archive__header {
+    padding-top: 36px;
+  }
+
+  .archive__cont {
+    display: block;
+  }
+
+  .archive__pager .page-numbers {
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    width: 28px;
   }
 
   .contact .m {

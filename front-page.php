@@ -28,20 +28,15 @@
 	</div>
 </section>
 
-<!-- カルーセルスライダー -->
-<section class="bg_white">
-<?php echo do_shortcode('[sp_wpcarousel id="132"]'); ?>
-</section>
-
 <section class="service bg_gray" id="service">
 	<div class="container wrapper">
 		<h2 class="main_title">Service<span class="main_title--sub">事業内容</span></h2>
 		<ul class="service__card">
 			<li class="service_card__item">
-				<figure class="service_card__image_wrapper"><im
+				<figure class="service_card__image_wrapper"><img class="service_card__image" src="<?php echo $themePath; ?>image/card_image.jpg" alt="ここに画像が入ります。"></figure>
+				<div class="service_card__body">
 					<h3 class="service_card__title">見出しテキスト</h3>
-					<p class="service_card__text">ここにはg class="service_card__image" src="<?php echo $themePath; ?>image/card_image.jpg" alt="ここに画像が入ります。"></figure>
-				<div class="service_card__body">1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。</p>
+					<p class="service_card__text">ここには1行推奨30〜35文字のテキストが入ります。ここには1行推奨30〜35文字のテキストが入ります。</p>
 				</div>
 			</li>
 			<li class="service_card__item">
@@ -104,6 +99,9 @@
 				wp_reset_postdata();
 			?>
 		</ul>
+		<?php if( get_post_type_archive_link('post') ) : ?>
+		<a class="main_button news__more_button" href="<?php echo bloginfo('url'); ?>/archives">View More</a>
+		<?php endif; ?>
 	</div>
 </section>
 <section class="contact theme_color">

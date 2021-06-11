@@ -15,6 +15,8 @@
     <title><?php bloginfo('name');?>｜お問い合わせ</title>
   <?php elseif(is_page('privacy')) : ?>
     <title><?php bloginfo('name');?>｜プライバシーポリシー</title>
+    <?php elseif(is_archive()) : ?>
+    <title><?php bloginfo('name');?>｜ニュース一覧</title>
   <?php endif; ?>
   <link rel="canonical" href="<?php bloginfo('url');?>">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">

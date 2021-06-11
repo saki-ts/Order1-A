@@ -1,0 +1,112 @@
+/***************************************
+
+Archive
+
+***************************************/
+.archive {
+  &__header {
+    padding-top: 136px;
+
+    @include mq {
+      padding-top: 36px;
+    }
+  }
+
+  &__topics {
+    padding-bottom: 120px;
+  }
+
+  &__card {
+    border-bottom: 1px solid #DBDBDB;
+    padding: 16px 0;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__cont {
+    display: flex;
+
+    @include mq {
+      display: block;
+    }
+
+    * {
+      flex-shrink: 0;
+    }
+  }
+
+  &__date {
+    color: #484848;
+    flex: 0 1 100px;
+    margin-right: 16px;
+  }
+
+  &__text {
+    color: #222;
+    font-weight: 500;
+    flex: 0 1 calc(100% - 100px);
+  }
+}
+
+/* --------------------
+pager
+-------------------- */
+
+/* 自動生成されるページャータイトルを非表示 */
+.archive {
+  .screen-reader-text {
+    display: none !important;
+  }
+
+  &__pager {
+    margin-top: 40px;
+    text-align: center;
+
+    .nav-links {
+      justify-content: space-between;
+      display: inline-flex;
+    }
+
+    .page-numbers {
+      background: $color-white;
+      color: $color-primary;
+      border-radius: 4px;
+      display: block;
+      text-align: center;
+      line-height: 40px;
+      height: 40px;
+      transition: 0.3s;
+      width: 40px;
+
+      @include mq {
+        line-height: 28px;
+        font-size: 14px;
+        height: 28px;
+        width: 28px;
+      }
+
+      &:not(:first-child){
+        margin-left: 12px;
+      }
+
+      &:not(.dots) {
+        border: 1px solid $color-secondary;
+      }
+
+      &:hover:not(.dots) {
+        background: $color-secondary;
+        color: $color-white;
+        text-decoration: none;
+      }
+
+      &.current {
+        background: $color-secondary;
+        color: $color-white;
+      }
+    }
+  }
+
+
+}
