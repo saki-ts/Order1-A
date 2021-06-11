@@ -99,37 +99,6 @@
 				wp_reset_postdata();
 			?>
 		</ul>
-	</div>
-</section>
-
-<section class="news bg_white" id="news">
-	<div class="container wrapper">
-		<h2 class="main_title">News<span class="main_title--sub">ニュース(一覧)</span></h2>
-		<ul class="news__list">
-
-			<?php
-				$args = array(
-					'posts_per_page' => 3
-				);
-				$posts = get_posts( $args );
-				foreach ( $posts as $post ):
-				$postId = get_the_ID();
-				$linkUrl = get_post_meta($postId, 'link_url', true);
-				setup_postdata( $post );
-			?>
-
-			<li class="news_list__item">
-				<a class="news_list__link" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-					<time class="news_list__date"><?php the_time( 'Y.m.d' ); ?></time>
-					<p class="news_list__text"><?php the_title();?></p>
-				</a>
-			</li>
-
-			<?php
-				endforeach;
-				wp_reset_postdata();
-			?>
-		</ul>
 		<?php if( get_post_type_archive_link('post') ) : ?>
 		<a class="main_button news__more_button" href="<?php echo bloginfo('url'); ?>/archives">View More</a>
 		<?php endif; ?>
