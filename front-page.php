@@ -99,9 +99,6 @@
 				wp_reset_postdata();
 			?>
 		</ul>
-		<?php if( get_post_type_archive_link('post') ) : ?>
-		<a class="main_button news__more_button" href="<?php echo bloginfo('url'); ?>/archives">View More</a>
-		<?php endif; ?>
 	</div>
 </section>
 <section class="contact theme_color">
