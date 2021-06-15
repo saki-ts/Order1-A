@@ -9,7 +9,7 @@ get_header();
     <h1 class="branch_main_title">News<span class="branch_main_title--sub">ニュース</span></h1>
   </header>
 </section>
-<section class="archive__topics">
+<section class="archive__topics archive__<?php echo esc_attr(get_post_type()); ?>">
   <div class="container wrapper">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php get_template_part('loop-content'); ?>
