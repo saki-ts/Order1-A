@@ -43,6 +43,10 @@ Footer
       @include mq {
         font-size: 20px;
       }
+
+      img {
+        max-width: 50%;
+      }
     }
   }
 
