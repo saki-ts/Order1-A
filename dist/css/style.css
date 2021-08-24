@@ -322,6 +322,10 @@ Footer
   text-decoration: none;
 }
 
+.f_head__logo img {
+  max-width: 50%;
+}
+
 .f_address__text {
   color: #fff;
 }
